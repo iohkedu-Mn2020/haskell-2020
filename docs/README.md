@@ -1,7 +1,6 @@
 # CIS 194: Introduction to Haskell (Fall 2016)
 
 ![Haskell Logo](img/IOHK_logo.webp)
-
 + Lectures: Mondays, Wednesdays and Fridays
 + **Instructors:**
     - [Lars Brünjes](https://iohk.io/en/team/lars-brunjes)
@@ -27,6 +26,10 @@ programming assignments, and an open-ended final project.
 
 Homework is due at midnight at the end of the day listed.
 All homework submission is via GitHub classrom.
+
+Hello
+
+[00-welcome](/lectures/00-welcome.pdf)
 
 | Lecture                                                                          | Homework                                 | Deadline |
 |----------------------------------------------------------------------------------|------------------------------------------|----------|
