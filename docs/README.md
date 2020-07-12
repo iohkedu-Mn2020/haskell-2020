@@ -22,44 +22,39 @@ consist of several special topics that explore advanced features of
 Haskell. Evaluation will be based on class participation, weekly
 programming assignments, and an open-ended final project.
 
-## Outline
+
+
+## Lectures
+- [00-welcome.pdf](../lectures/00-welcome.pdf)
+- [01-intro-cryptocurrencies.pdf](../lectures/01-intro-cryptocurrencies.pdf)
+- [02-overview-haskell.pdf](../lectures/02-overview-haskell.pdf)
+- [03-datatypes-functions.pdf](../lectures/03-datatypes-functions.pdf)
+- [04-packaging-and-tools.pdf](../lectures/04-packaging-and-tools.pdf)
+- [05-polymorphism-type-classes.pdf](../lectures/05-polymorphism-type-classes.pdf)
+- [06-io.pdf](../lectures/06-io.pdf)
+- [07-higher-order-functions.pdf](../lectures/07-higher-order-functions.pdf)
+- [08-testing.pdf](../lectures/08-testing.pdf)
+- [09-abstraction-patterns.pdf](../lectures/09-abstraction-patterns.pdf)
+- [10-concurrency.pdf](../lectures/10-concurrency.pdf)
+- [11-servers.pdf](../lectures/11-servers.pdf)
+- [12-laws-proofs.pdf](../lectures/12-laws-proofs.pdf)
+- [13-parser-combinators.pdf](../lectures/13-parser-combinators.pdf)
+- [14-more-parsing.pdf](../lectures/14-more-parsing.pdf)
+- [15-data-structures.pdf](../lectures/15-data-structures.pdf)
+- [16-more-data-structures.pdf](../lectures/16-more-data-structures.pdf)
+- [17-lambda-calculus.pdf](../lectures/17-lambda-calculus.pdf)
+- [18-optics.pdf](../lectures/18-optics.pdf)
+- [19-more-monads.pdf](../lectures/19-more-monads.pdf)
+- [20-free-monads.pdf](../lectures/20-free-monads.pdf)
+- [21-type-system.pdf](../lectures/21-type-system.pdf)
+- [22-streaming.pdf](../lectures/22-streaming.pdf)
+- [23-more-optics.pdf](../lectures/23-more-optics.pdf)
+- [24-more-streaming.pdf](../lectures/24-more-streaming.pdf)
+- [25-generic-programming.pdf](../lectures/25-generic-programming.pdf)
+- [26-system-f-core.pdf](../lectures/26-system-f-core.pdf)
+
+
+## Assignments
 
 Homework is due at midnight at the end of the day listed.
 All homework submission is via GitHub classrom.
-
-Hello
-
-[00-welcome](/lectures/00-welcome.pdf)
-
-| Lecture                                                                          | Homework                                 | Deadline |
-|----------------------------------------------------------------------------------|------------------------------------------|----------|
-| [00-welcome](lectures/00-welcome.md)                                             | [HW](https://www.github.com/iohkedu/W01) |          |
-| [01-intro-cryptocurrencies](lectures/01-intro-cryptocurrencies.md)               | [HW](https://www.github.com/iohkedu/W01) |          |
-| [02-overview-haskell](lectures/02-overview-haskell.md)                           | [HW](https://www.github.com/iohkedu/W01) |          |
-| [03-datatypes-functions](lectures/03-datatypes-functions.md)                     | [HW](https://www.github.com/iohkedu/W01) |          |
-| [04-packaging-and-tools](lectures/04-packaging-and-tools.md)                     | [HW](https://www.github.com/iohkedu/W01) |          |
-| [05-polymorphism-and-type-classes](lectures/05-polymorphism-and-type-classes.md) | [HW](https://www.github.com/iohkedu/W01) |          |
-| [06-io](lectures/06-io.md)                                                       | [HW](https://www.github.com/iohkedu/W01) |          |
-| [07-higher-order-functions](lectures/07-higher-order-functions.md)               | [HW](https://www.github.com/iohkedu/W01) |          |
-| [08-testing](lectures/08-testing.md)                                             | [HW](https://www.github.com/iohkedu/W01) |          |
-| [09-abstraction-patterns](lectures/09-abstraction-patterns.md)                   | [HW](https://www.github.com/iohkedu/W01) |          |
-| [10-concurrency](lectures/10-concurrency.md)                                     | [HW](https://www.github.com/iohkedu/W01) |          |
-| [11-servers](lectures/11-servers.md)                                             | [HW](https://www.github.com/iohkedu/W01) |          |
-| [12-laws-proofs](lectures/12-laws-proofs.md)                                     | [HW](https://www.github.com/iohkedu/W01) |          |
-| [13-parser-combinators](lectures/13-parser-combinators.md)                       | [HW](https://www.github.com/iohkedu/W01) |          |
-| [14-more-parsing](lectures/14-more-parsing.md)                                   | [HW](https://www.github.com/iohkedu/W01) |          |
-| [15-data-structures](lectures/15-data-structures.md)                             | [HW](https://www.github.com/iohkedu/W01) |          |
-| [16-more-data-structures](lectures/16-more-data-structures.md)                   | [HW](https://www.github.com/iohkedu/W01) |          |
-| [17-lambda-calculus](lectures/17-lambda-calculus.md)                             | [HW](https://www.github.com/iohkedu/W01) |          |
-| [18-optics](lectures/18-optics.md)                                               | [HW](https://www.github.com/iohkedu/W01) |          |
-| [19-more-monads](lectures/19-more-monads.md)                                     | [HW](https://www.github.com/iohkedu/W01) |          |
-| [20-free-monads](lectures/20-free-monads.md)                                     | [HW](https://www.github.com/iohkedu/W01) |          |
-| [21-type-system](lectures/21-type-system.md)                                     | [HW](https://www.github.com/iohkedu/W01) |          |
-| [22-streaming](lectures/22-streaming.md)                                         | [HW](https://www.github.com/iohkedu/W01) |          |
-| [23-more-optics](lectures/23-more-optics.md)                                     | [HW](https://www.github.com/iohkedu/W01) |          |
-| [24-more-streaming](lectures/24-more-streaming.md)                               | [HW](https://www.github.com/iohkedu/W01) |          |
-| [25-generic-programming](lectures/25-generic-programming.md)                     | [HW](https://www.github.com/iohkedu/W01) |          |
-| [Servant Demo](lectures/Servant-Demo.md)                                         | [HW](https://www.github.com/iohkedu/W01) |          |
-| [Database Demo](lectures/Database-Demo.md)                                       | [HW](https://www.github.com/iohkedu/W01) |          |
-| [FRP Demo](lectures/FRP-Demo.md)                                                 | [HW](https://www.github.com/iohkedu/W01) |          |
-| [26-system-f-core](lectures/26-system-f-core.md)                                 | [HW](https://www.github.com/iohkedu/W01) |          |
