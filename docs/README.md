@@ -73,7 +73,7 @@ TODO: Sort this list in chronological order
 - [Weekly Lab 2 Project 1](https://classroom.github.com/g/VOXxjQGX)
 - [Weekly Lab 3](https://classroom.github.com/a/DbLddfGO)
 - [Weekly Lab 4](https://classroom.github.com/a/JeyoZcf9)
-- [Weekly Lab 5]()
+- [Weekly Lab 5](https://classroom.github.com/a/dbjJDHTT)
 - [Weekly Lab 5 Project 2]()
 
 ## Tests
