@@ -58,3 +58,26 @@ programming assignments, and an open-ended final project.
 
 Homework is due at midnight at the end of the day listed.
 All homework submission is via GitHub classrom.
+
+TODO: Sort this list in chronological order
+
+- [02-Introduction]()
+- [03-datatypes](https://classroom.github.com/a/YjmNAnkP)
+- [06-io](https://classroom.github.com/a/_eDITQUZ)
+- [07-higher-order](https://classroom.github.com/a/8_VyrI5G)
+- [18-optics](https://classroom.github.com/a/64scxO2N)
+- [23-more-optics-iso-exercise](https://classroom.github.com/a/X_vqmbZ-)
+- [23-more-optics-prism-exercise](https://classroom.github.com/a/ndNOA6ql)
+- [Weekly Lab 1](https://classroom.github.com/a/3-NL1Dm1)
+- [Weekly Lab 2](https://classroom.github.com/a/C_4fj1Wl)
+- [Weekly Lab 2 Project 1](https://classroom.github.com/g/VOXxjQGX)
+- [Weekly Lab 3](https://classroom.github.com/a/DbLddfGO)
+- [Weekly Lab 4](https://classroom.github.com/a/JeyoZcf9)
+- [Weekly Lab 5]()
+- [Weekly Lab 5 Project 2]()
+
+## Tests
+
+Every two weeks there will be a little exam.
+Don't worry it's the same tecnique as the homeworks
+the only difference is that here the time windows is shorter.
