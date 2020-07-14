@@ -1,6 +1,6 @@
 # CIS 194: Introduction to Haskell (Fall 2016)
 
-![Haskell Logo](img/IOHK_logo.webp)
+![Haskell Logo](img/IOHK_logo.webp?raw=true)
 + Lectures: Mondays, Wednesdays and Fridays
 + **Instructors:**
     - [Lars Brünjes](https://iohk.io/en/team/lars-brunjes)
