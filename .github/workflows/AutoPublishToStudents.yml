@@ -36,8 +36,8 @@ jobs:
     # Use gitless because with plain git just doesn't work.
     - name: Install gitless
       run: | 
-        pip3 install wheel
-        pip3 install gitless
+        pip install wheel
+        pip install gitless
       
         
     # Runs a set of commands using the runners shell
