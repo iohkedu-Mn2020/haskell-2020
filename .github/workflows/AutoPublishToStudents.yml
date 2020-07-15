@@ -40,6 +40,7 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Merge the current state of the teachers repo onto the students repo
       run: |
+        sudo snap install --channel=beta --devmode gitless
         gl remote --create mongolia2020 git@github.com:iohkedu/haskell-mongolia-2020.git
         gl branch --create mongolia
         gl switch mongolia
