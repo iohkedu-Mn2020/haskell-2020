@@ -1,6 +1,6 @@
 # Haskell and Cryptocurrencies. Mongolia 2020
 
-![Haskell Logo](https://commons.wikimedia.org/wiki/File:Haskell-Logo.svg)
+![Haskell Logo](https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg)
 
 - Lectures: Mondays, Wednesdays and Fridays
 - **Instructors:**
