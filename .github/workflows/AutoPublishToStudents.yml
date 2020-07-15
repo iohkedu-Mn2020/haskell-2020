@@ -35,7 +35,7 @@ jobs:
         
     # Use gitless because with plain git just doesn't work.
     - name: Install gitless
-      run: snap install --channel=edge gitless
+      run: sudo snap install --channel=edge gitless
         
     # Runs a set of commands using the runners shell
     - name: Merge the current state of the teachers repo onto the students repo
