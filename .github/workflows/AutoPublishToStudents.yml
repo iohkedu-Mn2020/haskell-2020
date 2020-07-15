@@ -21,31 +21,20 @@ jobs:
     - uses: actions/checkout@v2
 
 
-    # Install the SSH key so that it can push to the students repo
-    - name: Install SSH Key
-      uses: shimataro/ssh-key-action@v2.0.3
-      with:
-        key: ${{ secrets.PUBLISH_TO_STUDENTS }}
-        name: id_rsa # optional
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
-
     # Use gitless because with plain git just doesn't work.
     - name: Install gitless
       run: |
         sudo pip install wheel
         sudo pip install gitless
-        echo $PATH
         which gl
 
     # Runs a set of commands using the runners shell
         # Runs a single command using the runners shell
     - name: Merge the current state of the teachers repo onto the students repo
       run: |
-        git config --local user.name "elviejo79"
-        git config --local user.email "alejandro.garcia@iohk.io"
-        /usr/local/bin/gl remote --create mongolia2020 git@github.com:iohkedu/haskell-mongolia-2020.git
-        /usr/local/bin/gl branch --create mongolia
-        /usr/local/bin/gl switch mongolia
-        /usr/local/bin/gl branch --set-upstream mongolia2020/master
-        /usr/local/bin/gl merge master
-        /usr/local/bin/gl publish
+        gl remote --create mongolia2020 https://elviejo79:${{ secrets.SSHPASS }}@github.com/iohkedu/haskell-mongolia-2020.git
+        gl branch --create mongolia
+        gl switch mongolia
+        gl branch --set-upstream mongolia2020/master
+        gl merge master
+        gl publish
