@@ -2,13 +2,12 @@
 
 ![Haskell Logo](https://commons.wikimedia.org/wiki/File:Haskell-Logo.svg)
 
-+ Lectures: Mondays, Wednesdays and Fridays
-+ **Instructors:**
-    - [Lars Brünjes](https://iohk.io/en/team/lars-brunjes)
-    - [Andres Löh](http://www.well-typed.com/people/andres/)
-+ **TA**
-    - [Alejandro García](https://iohk.io/en/team/alejandro-garcia)
-
+- Lectures: Mondays, Wednesdays and Fridays
+- **Instructors:**
+  - [Lars Brünjes](https://iohk.io/en/team/lars-brunjes)
+  - [Andres Löh](http://www.well-typed.com/people/andres/)
+- **TA**
+  - [Alejandro García](https://iohk.io/en/team/alejandro-garcia)
 
 ## Course Description
 
@@ -23,9 +22,8 @@ consist of several special topics that explore advanced features of
 Haskell. Evaluation will be based on class participation, weekly
 programming assignments, and an open-ended final project.
 
-
-
 ## Lectures
+
 - [00-welcome.pdf](../lectures/00-welcome.pdf)
 - [01-intro-cryptocurrencies.pdf](../lectures/01-intro-cryptocurrencies.pdf)
 - [02-overview-haskell.pdf](../lectures/02-overview-haskell.pdf)
@@ -54,7 +52,6 @@ programming assignments, and an open-ended final project.
 - [25-generic-programming.pdf](../lectures/25-generic-programming.pdf)
 - [26-system-f-core.pdf](../lectures/26-system-f-core.pdf)
 
-
 ## Assignments
 
 Homework is due at midnight at the end of the day listed.
@@ -62,7 +59,7 @@ All homework submission is via GitHub classrom.
 
 TODO: Sort this list in chronological order
 
-- [02-Introduction]()
+- [02-Introduction](https://classroom.github.com/a/ZFu9YQF5)
 - [03-datatypes](https://classroom.github.com/a/YjmNAnkP)
 - [06-io](https://classroom.github.com/a/_eDITQUZ)
 - [07-higher-order](https://classroom.github.com/a/8_VyrI5G)
@@ -75,7 +72,7 @@ TODO: Sort this list in chronological order
 - [Weekly Lab 3](https://classroom.github.com/a/DbLddfGO)
 - [Weekly Lab 4](https://classroom.github.com/a/JeyoZcf9)
 - [Weekly Lab 5](https://classroom.github.com/a/dbjJDHTT)
-- [Weekly Lab 5 Project 2]()
+- [Weekly Lab 5 Project 2](https://classroom.github.com/g/DbMcQk3d)
 
 ## Tests
 
