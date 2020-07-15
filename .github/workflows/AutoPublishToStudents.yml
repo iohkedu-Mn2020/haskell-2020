@@ -36,8 +36,9 @@ jobs:
     # Use gitless because with plain git just doesn't work.
     - name: Install gitless
       run: | 
-        pip install gitless
-        source ~/.bashrc
+        pip3 install wheel
+        pip3 install gitless
+      
         
     # Runs a set of commands using the runners shell
     - name: Merge the current state of the teachers repo onto the students repo
