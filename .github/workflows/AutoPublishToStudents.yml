@@ -41,9 +41,10 @@ jobs:
     - name: Merge the current state of the teachers repo onto the students repo
       run: |
         wget https://github.com/gitless-vcs/gitless/releases/download/v0.8.8/gl-v0.8.8-linux-x86_64.tar.gz && tar xvzf gl-v0.8.8-linux-x86_64.tar.gz
-        ./gl-v0.8.8-linux-x86_64/gl remote --create mongolia2020 git@github.com:iohkedu/haskell-mongolia-2020.git
-        ./gl-v0.8.8-linux-x86_64/gl branch --create mongolia
-        ./gl-v0.8.8-linux-x86_64/gl switch mongolia
-        ./gl-v0.8.8-linux-x86_64/gl branch --set-upstream mongolia2020/master
-        ./gl-v0.8.8-linux-x86_64/gl merge master
-        ./gl-v0.8.8-linux-x86_64/gl publish
+        mv gl-v0.8.8-linux-x86_64/gl 
+        ./gl remote --create mongolia2020 git@github.com:iohkedu/haskell-mongolia-2020.git
+        ./gl branch --create mongolia
+        ./gl switch mongolia
+        ./gl branch --set-upstream mongolia2020/master
+        ./gl merge master
+        ./gl publish
