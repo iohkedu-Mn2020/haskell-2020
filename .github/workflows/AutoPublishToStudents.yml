@@ -39,5 +39,5 @@ jobs:
         git remote add mongolia2020 git@github.com:iohkedu/haskell-mongolia-2020.git #bring the students repo as remote
         git fetch mongolia2020 master:mongolia                                       #https://stackoverflow.com/a/16095458/54848
         git checkout mongolia
-        git merge --allow-unrelated-histories master                                 #merge the teacher repo onto the students repo
+        git merge --allow-unrelated-histories -s ours master                         #merge the teacher repo onto the students repo
         git push
