@@ -20,8 +20,10 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: The user that is publibshing
+      run: |
+        git config --global user.name "elviejo79"
+        git config --global user.email alejandro.garcia@iohk.io
       
     # Install the SSH key so that it can push to the students repo
     - name: Install SSH Key
