@@ -20,7 +20,7 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: The user that is publibshing
+    - name: Configure user that is publishing (this should be something more generic)
       run: |
         git config --global user.name "elviejo79"
         git config --global user.email alejandro.garcia@iohk.io
@@ -32,12 +32,17 @@ jobs:
         key: ${{ secrets.PUBLISH_TO_STUDENTS }}
         name: id_rsa # optional
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-
+        
+    # Use gitless because with plain git just doesn't work.
+    - name: Install gitless
+      run: pip install gitless
+        
     # Runs a set of commands using the runners shell
     - name: Merge the current state of the teachers repo onto the students repo
       run: |
-        git remote add mongolia2020 git@github.com:iohkedu/haskell-mongolia-2020.git #bring the students repo as remote
-        git fetch mongolia2020                                         #https://stackoverflow.com/a/16095458/54848
-        git checkout -b mongolia --track mongolia2020/master
-        git merge --allow-unrelated-histories -s ours master                                              #apply the changes from master onto mongolia
-        git push mongolia2020/master
+        gl remote --create mongolia2020 git@github.com:iohkedu/haskell-mongolia-2020.git
+        gl branch --create mongolia
+        gl switch mongolia
+        gl branch --set-upstream mongolia2020/master
+        gl merge master
+        gl publish
