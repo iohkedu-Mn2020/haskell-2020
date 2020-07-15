@@ -1,6 +1,7 @@
-# CIS 194: Introduction to Haskell (Fall 2016)
+# Haskell and Cryptocurrencies. Mongolia 2020
 
-![Haskell Logo](img/IOHK_logo.webp?raw=true)
+![Haskell Logo](https://commons.wikimedia.org/wiki/File:Haskell-Logo.svg)
+
 + Lectures: Mondays, Wednesdays and Fridays
 + **Instructors:**
     - [Lars Brünjes](https://iohk.io/en/team/lars-brunjes)
