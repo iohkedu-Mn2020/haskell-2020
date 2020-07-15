@@ -19,19 +19,19 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # # Runs a single command using the runners shell
-    # - name: Configure user that is publishing (this should be something more generic)
-    #   run: |
-    #     git config --global user.name "elviejo79"
-    #     git config --global user.email alejandro.garcia@iohk.io
+    # Runs a single command using the runners shell
+    - name: Configure user that is publishing (this should be something more generic)
+      run: |
+        git config --global user.name "elviejo79"
+        git config --global user.email alejandro.garcia@iohk.io
 
-    # # Install the SSH key so that it can push to the students repo
-    # - name: Install SSH Key
-    #   uses: shimataro/ssh-key-action@v2.0.3
-    #   with:
-    #     key: ${{ secrets.PUBLISH_TO_STUDENTS }}
-    #     name: id_rsa # optional
-    #     known_hosts: ${{ secrets.KNOWN_HOSTS }}
+    # Install the SSH key so that it can push to the students repo
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2.0.3
+      with:
+        key: ${{ secrets.PUBLISH_TO_STUDENTS }}
+        name: id_rsa # optional
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
     # Use gitless because with plain git just doesn't work.
     - name: Install gitless
