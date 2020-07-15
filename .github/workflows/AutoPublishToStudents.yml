@@ -40,4 +40,4 @@ jobs:
         git fetch mongolia2020                                         #https://stackoverflow.com/a/16095458/54848
         git checkout -b mongolia --track mongolia2020/master
         git merge --allow-unrelated-histories -s ours master                                              #apply the changes from master onto mongolia
-        git push mongolia2020 HEAD
+        git push mongolia2020 HEAD:master
