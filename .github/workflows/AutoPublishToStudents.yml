@@ -35,7 +35,7 @@ jobs:
         SSHPASS: ${{ secrets.SSHPASS }}
       run: |
         gl remote -d mongolia2020 || true
-        gl remote --create mongolia2020 "https://elviejo79:${SSHPASS}@github.com/iohkedu/haskell-mongolia-2020.git"
+        gl remote --create mongolia2020 https://elviejo79:"${SSHPASS}"@github.com/iohkedu/haskell-mongolia-2020.git
         gl branch -d mongolia || true
         gl branch --create mongolia
         gl switch mongolia
