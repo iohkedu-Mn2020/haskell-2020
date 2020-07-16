@@ -34,8 +34,8 @@ jobs:
       env:
         SSHPASS: ${{ secrets.SSHPASS }}
       run: |
-        gl branch -d studentsRepo || true
-        gl remote -d downstream || true
+        (yes | gl branch -d studentsRepo) || true
+        (yes | gl remote -d downstream) || true
         gl remote --create downstream https://elviejo79:"${SSHPASS}"@github.com/iohkedu/haskell-mongolia-2020.git
         gl branch --create studentsRepo
         gl switch studentsRepo
@@ -45,5 +45,5 @@ jobs:
         gl merge master
         gl publish
         gl switch master
-        gl branch -d studentsRepo || true
-        gl remote -d downstream || true
+        (yes | gl branch -d studentsRepo) || true
+        (yes | gl remote -d downstream) || true
