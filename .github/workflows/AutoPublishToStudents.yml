@@ -36,7 +36,7 @@ jobs:
         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         gl branch -d studentsRepo || true
         gl remote -d studentsRepo || true
-        gl remote --create downstream https://elviejo79:"${SSHPASS}"@github.com/iohkedu/haskell-mongolia-2020.git
+        gl remote --create downstream https://elviejo79@github.com/iohkedu/haskell-mongolia-2020.git
         gl branch --create studentsRepo
         gl switch studentsRepo
         gl branch --set-upstream downstream/master
