@@ -34,11 +34,11 @@ Now in the teachers repo there is a master branch.
 Everything committed to the _teachers-master_ branch is
 automatically merged to the _students_ _repository_ .
 
-In this diagram the dots in:
+In this diagram the circles in:
 
-- blue are the teachers master repository
-- purple is the students repository which automatically gets updated with new content
-- green is a feature branch, work in process in the teachers repository.
+* purple are the teachers master repository
+* pink is the students repository which automatically gets updated with new content
+* aqua-green is a feature branch, work in process in the teachers repository.
 
 ![Autopublish from teachers to students](img/Autopublishing.png)
 
