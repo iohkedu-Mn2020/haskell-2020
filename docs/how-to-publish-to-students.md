@@ -4,14 +4,14 @@
 
 1. In order to have one repo for teachers and one for students.
 1. As a teacher create a *feature branch* in:
-   [teachers-haskell-and-cryptocurrencies](https://github.com/iohkedu/teachers-haskell-and-cryptocurrencies)
+   [haskell-mongolia-2020-teachers](https://github.com/iohkedu/haskell-mongolia-2020-teachers)
 1. When ready merge your branch to master
 1. It will be automatically published to students repo:
    [haskell-mongolia-2020](https://github.com/iohkedu/haskell-mongolia-2020)
 
 Now for the long explanation:
 
-## How can we have a private branch only for teachers?
+## How can we have a private branch only for teachers
 
 One might need private branch to:
 
@@ -26,7 +26,7 @@ by different sets of persons.
 
 With that then we can change the original question to:
 
-## How can we have a private /repository/ for teachers, and a another for students
+## How can we have a private _repository_ for teachers, and a another for students
 
 The idea is that we have the Teachers Repository.
 And we have the Students repository which is a _fork_ of the teachers repostory.
@@ -36,9 +36,9 @@ automatically merged to the _students_ _repository_ .
 
 In this diagram the circles in:
 
-* purple are the teachers master repository
-* pink is the students repository which automatically gets updated with new content
-* aqua-green is a feature branch, work in process in the teachers repository.
+- purple are the teachers master repository
+- pink is the students repository which automatically gets updated with new content
+- aqua-green is a feature branch, work in process in the teachers repository.
 
 ![Autopublish from teachers to students](img/Autopublishing.png)
 
@@ -57,3 +57,12 @@ and from there automatically published to _stuents_ repo.
 A teacher will spend most of the time in a _feature branch_ and only when is
 ready to share the documnet with the students will _merge to master_ the branch
 and from there it will be automatically merged to the students repostiory.
+
+## How does autopublishing work
+
+We use the continuous integration platform
+[GitHub Actions](https://github.com/features/actions)
+Our work flow
+[autopublish-to-students.yml](https://github.com/iohkedu/haskell-mongolia-2020-teachers/blob/master/.github/workflows/autopublish-to-students.yml)
+On push, clones, modifies and commits to the
+[students repo](https://github.com/iohkedu/haskell-mongolia-2020)
