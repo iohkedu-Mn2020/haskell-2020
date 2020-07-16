@@ -42,8 +42,9 @@ jobs:
         gl branch --set-upstream downstream/master
         gl branch #list all branches
         gl remote
-        gl merge master
-        gl publish
+        gl fuse || true # if there are changes of the studentsRepo bring them here
+        gl merge master || true
+        gl publish || true
         gl switch master
         (yes | gl branch -d studentsRepo) || true
         (yes | gl remote -d downstream) || true
