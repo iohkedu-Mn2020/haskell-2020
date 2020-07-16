@@ -41,6 +41,6 @@ jobs:
         gl branch --create studentsRepo
         gl switch studentsRepo
         gl branch --set-upstream studentsRepo/master
-        gl branch
-        gl merge master
+        gl branch #list all branches
+        gl fuse master
         gl publish
