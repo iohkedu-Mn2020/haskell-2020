@@ -35,11 +35,11 @@ jobs:
       run: |
         git config user.name "${GITHUB_ACTOR}"
         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        gl remote -d mongolia2020 || true
-        gl remote --create mongolia2020 https://elviejo79:"${SSHPASS}"@github.com/iohkedu/haskell-mongolia-2020
-        gl branch -d mongolia || true
-        gl branch --create mongolia
-        gl switch mongolia
+        gl branch -d studentsRepo || true
+        gl remote -d studentsRepo || true
+        gl remote --create studentsRepo https://elviejo79:"${SSHPASS}"@github.com/iohkedu/haskell-mongolia-2020.git
+        gl branch --create studentsRepo
+        gl switch studentsRepo
         gl branch --set-upstream mongolia2020/master
         gl branch
         gl merge master
