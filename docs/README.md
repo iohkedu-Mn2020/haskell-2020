@@ -24,6 +24,10 @@ consist of several special topics that explore advanced features of
 Haskell. Evaluation will be based on class participation, weekly
 programming assignments, and an open-ended final project.
 
+## Getting the Software
+
+You can find instructions on how to install the necessary software [here](https://github.com/zfoh/haskell-simple-install/blob/master/README.md).
+
 ## Lectures
 
 ## Assignments
