@@ -41,5 +41,6 @@ jobs:
         gl branch --create mongolia
         gl switch mongolia
         gl branch --set-upstream mongolia2020/master
+        gl branch
         gl merge master
         gl publish
