@@ -44,3 +44,6 @@ jobs:
         gl remote
         gl merge master
         gl publish
+        gl switch master
+        gl branch -d studentsRepo || true
+        gl remote -d downstream || true
