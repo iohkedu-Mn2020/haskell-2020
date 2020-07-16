@@ -19,6 +19,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
 
     # Use gitless because with plain git just doesn't work.
     - name: Install gitless
@@ -36,7 +38,7 @@ jobs:
         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         gl branch -d studentsRepo || true
         gl remote -d studentsRepo || true
-        gl remote --create downstream https://elviejo79@github.com/iohkedu/haskell-mongolia-2020.git
+        gl remote --create downstream https://elviejo79:"${SSHPASS}"@github.com/iohkedu/haskell-mongolia-2020.git
         gl branch --create studentsRepo
         gl switch studentsRepo
         gl branch --set-upstream downstream/master
