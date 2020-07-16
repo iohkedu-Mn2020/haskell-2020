@@ -40,7 +40,7 @@ jobs:
         gl remote --create studentsRepo https://elviejo79:"${SSHPASS}"@github.com/iohkedu/haskell-mongolia-2020.git
         gl branch --create studentsRepo
         gl switch studentsRepo
-        gl branch --set-upstream mongolia2020/master
+        gl branch --set-upstream studentsRepo/master
         gl branch
         gl merge master
         gl publish
