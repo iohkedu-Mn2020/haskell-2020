@@ -33,6 +33,8 @@ jobs:
       env:
         SSHPASS: ${{ secrets.SSHPASS }}
       run: |
+        git config user.name "${GITHUB_ACTOR}"
+        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         gl remote -d mongolia2020 || true
         gl remote --create mongolia2020 https://elviejo79:"${SSHPASS}"@github.com/iohkedu/haskell-mongolia-2020
         gl branch -d mongolia || true
