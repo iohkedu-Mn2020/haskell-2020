@@ -8,6 +8,8 @@
   - [Andres Löh](http://www.well-typed.com/people/andres/)
 - **TA**
   - [Alejandro García](https://iohk.io/en/team/alejandro-garcia)
+- [Students portal](https://github.com/iohkedu/haskell-mongolia-2020)
+
 
 ## Course Description
 
