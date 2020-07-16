@@ -1,4 +1,4 @@
-# How to publish to information for students
+# How to publish to the students repo
 
 ## Summary
 
@@ -26,7 +26,7 @@ by different sets of persons.
 
 With that then we can change the original question to:
 
-## How can we have a private /repository/ for teachers, and a another for students?
+## How can we have a private /repository/ for teachers, and a another for students
 
 The idea is that we have the Teachers Repository.
 And we have the Students repository which is a _fork_ of the teachers repostory.
@@ -44,9 +44,9 @@ In this diagram the circles in:
 
 ## Feature Branches
 
-This organization opens the possibility for _feature branches_ on the teachers repository.
+This organization opens the possibility for _feature branches_ on the teachers repo.
 For example a teacher can start to create a new Lecture in a feature branch,
-then merge it to _teachers-master_ and then get the new lesson automatically
+merge it to _teachers-master_ and then get the new lesson automatically
 published to the _students_ repo.
 
 The same principle applies to Exams.
