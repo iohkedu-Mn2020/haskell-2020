@@ -8,8 +8,35 @@
   - [Andres Löh](http://www.well-typed.com/people/andres/)
 - **TA**
   - [Alejandro García](https://iohk.io/en/team/alejandro-garcia)
-- [Students portal](https://github.com/iohkedu/haskell-mongolia-2020)
 
+## How to get help
+
+Students portal
+Is the first source of information. Here you will find
+lecture, notes, exercises, etc.
+Visit it in: [haskell-mongolia-2020](https://github.com/iohkedu/haskell-mongolia-2020)
+
+Class Questions
+Questions like:
+
+- How do I install Haskell on Windows?
+- Which text editor should I use?
+- What is a Cabal Package?
+It should go in: [Stackoverflow IohkEdu](https://stackoverflow.com/c/iohkedu/questions)
+On stackoverflow team students are *encouraged* to answer each others questions.
+
+[Alejandro Garcia](alejandro.garcia@iohk.io) will monitor the forum closely
+so that we don't let questions go unanswered.
+
+Defects
+If you found a defect in one of the sample programs.
+Or maybe a typo in one of the slides we will really appreciate it
+if you could post it as an issue on GitHub Itself.
+Report defecs in: [haskell-mongolia-2020/issues](https://github.com/iohkedu/haskell-mongolia-2020/issues)
+
+Administrative Questions:
+Related to the Lab in Mongolia should be directed to:
+Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 ## Course Description
 
@@ -39,4 +66,5 @@ All homework submission is via GitHub classrom.
 
 Every two weeks there will be a little exam.
 Don't worry, it's the same technique as the homeworks,
-the only difference is that here the time windows is shorter and that you will work alone, not in a team.
+the only difference is that here the time windows is shorter and
+that you will work alone, not in a team.
