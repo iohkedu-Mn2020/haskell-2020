@@ -25,7 +25,18 @@ programming assignments, and an open-ended final project.
 
 ## Getting the Software
 
-You can find instructions on how to install the necessary software [here](https://github.com/zfoh/haskell-simple-install/blob/master/README.md).
+You will need `ghc` (the Haskell compiler; at least version 8.6.5, preferably
+version 8.10.1), `cabal` (a build tool for Haskell; at least version 2.4.1,
+preferably version 3.2), and a suitable development editor to edit source files
+with (e.g. Visual Studio Code, or (neo)vim).
+
+Instructions on how to install the necessary software are available [here](https://github.com/zfoh/haskell-simple-install/blob/master/README.md),
+separated by platform (Linux, MacOS, Windows).
+
+These instructions also include information on how to set up more advanced IDE-like
+editor support for Visual Studio Code, in the form of `ghcide`. While this will be
+helpful in the long run, it is not mandatory, and if you experience problems setting
+this up, don't worry for now.
 
 ## How to get help
 
