@@ -75,6 +75,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 1. [Welcome](../lectures/00-welcome.pdf)
 2. [Introduction to Cryptocurrencies](../lectures/01-intro-cryptocurrencies.pdf)
+3. [An Overview of Haskell](../lectures/02-overview-haskell.pdf)
 
 ## Assignments
 
