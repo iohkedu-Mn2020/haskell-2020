@@ -75,12 +75,13 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 1. [Welcome](../lectures/00-welcome.pdf)
 2. [Introduction to Cryptocurrencies](../lectures/01-intro-cryptocurrencies.pdf)
-3. [An Overview of Haskell](../lectures/02-overview-haskell.pdf)
 
 ## Assignments
 
 Homework is due at midnight at the end of the day listed.
 All homework submission is via GitHub classrom.
+
+1. [Introduction](https://classroom.github.com/a/ZFu9YQF5)
 
 ## Tests
 
