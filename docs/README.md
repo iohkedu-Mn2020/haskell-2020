@@ -73,6 +73,9 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 ## Lectures
 
+    1. [Welcome](lectures/00-welcome.pdf)
+    2. [Introduction to Cryptocurrencies](lectures/01-intro-cryptocurrencies.pdf)
+
 ## Assignments
 
 Homework is due at midnight at the end of the day listed.
