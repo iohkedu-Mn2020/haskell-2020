@@ -81,8 +81,6 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 Homework is due at midnight at the end of the day listed.
 All homework submission is via GitHub classrom.
 
-1. [Introduction](https://classroom.github.com/a/ZFu9YQF5)
-
 ## Tests
 
 Every two weeks there will be a little exam.
