@@ -80,9 +80,13 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 ## Assignments
 
 Homework is due at midnight at the end of the day listed.
-All homework submission is via GitHub classrom.
+All homework submission is via GitHub classroom.
+If you have questions, check this video:
+[How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
 
 1. [Introduction](https://classroom.github.com/a/ZFu9YQF5)
+
+
 
 ## Tests
 
