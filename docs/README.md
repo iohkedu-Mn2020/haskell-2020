@@ -86,6 +86,7 @@ If you have questions, check this video:
 [How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
 
 1. [Introduction](https://classroom.github.com/a/ZFu9YQF5)
+1. [Datatypes](https://classroom.github.com/a/YjmNAnkP)
 
 ## Tests
 
