@@ -76,6 +76,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 1. [Welcome](../lectures/00-welcome.pdf)
 2. [Introduction to Cryptocurrencies](../lectures/01-intro-cryptocurrencies.pdf)
 3. [An Overview of Haskell](../lectures/02-overview-haskell.pdf)
+4. [Datatypes and functions](../lectures/03-datatypes-functions.pdf)
 
 ## Assignments
 
@@ -85,8 +86,6 @@ If you have questions, check this video:
 [How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
 
 1. [Introduction](https://classroom.github.com/a/ZFu9YQF5)
-
-
 
 ## Tests
 
