@@ -72,7 +72,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 ## Class
 
-### 1st Session (20-july-2020)
+### 1st Session (20-July-2020)
 
 - Slides:
   1. [Welcome](../lectures/00-welcome.pdf)
@@ -83,13 +83,19 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
   [video](https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing) /
   [chat](https://drive.google.com/file/d/1OVoowel76o5tedNLYxxCyPN6qopGD6wK/view?usp=sharing)
 
-### 2nd Session (22-july-2020)
+### 2nd Session (22-July-2020)
 
 - Slides: [Datatypes & Functions](../lectures/03-datatypes-functions.pdf)
 - Assignment: [Datatypes & Functions](https://classroom.github.com/a/YjmNAnkP)
 - Recording:
   [video](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing) /
   [chat](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing)
+
+### 3rd Session (24-July-2020)
+
+- Slides:
+  1. [Polymorphism & Type Classes](../lectures/04-polymorphism-type-classes.pdf)
+  2. [Packaging & Tools](../lectures/05-packaging-and-tools.pdf)
 
 ## Notes
 
