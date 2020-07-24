@@ -9,7 +9,6 @@
 - **TA**
   - [Alejandro García](https://iohk.io/en/team/alejandro-garcia)
 
-
 ## Course Description
 
 Haskell is a high-level, purely functional programming language with a
@@ -53,8 +52,8 @@ Questions like:
 - How do I install Haskell on Windows?
 - Which text editor should I use?
 - What is a Cabal Package?
-It should go in: [Stackoverflow IohkEdu](https://stackoverflow.com/c/iohkedu/questions)
-On stackoverflow team students are *encouraged* to answer each others questions.
+  It should go in: [Stackoverflow IohkEdu](https://stackoverflow.com/c/iohkedu/questions)
+  On stackoverflow team students are _encouraged_ to answer each others questions.
 
 [Alejandro Garcia](alejandro.garcia@iohk.io) will monitor the forum closely
 so that we don't let questions go unanswered.
@@ -71,33 +70,39 @@ Report defecs in: [haskell-mongolia-2020/issues](https://github.com/iohkedu/hask
 Related to the Lab in Mongolia should be directed to:
 Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
-## Lectures
+## Class
 
-1. [Welcome](../lectures/00-welcome.pdf)
-2. [Introduction to Cryptocurrencies](../lectures/01-intro-cryptocurrencies.pdf)
-3. [An Overview of Haskell](../lectures/02-overview-haskell.pdf)
-4. [Datatypes and functions](../lectures/03-datatypes-functions.pdf)
+### 1st Session (20-july-2020)
 
-## Assignments
+- Slides:
+  1. [Welcome](../lectures/00-welcome.pdf)
+  2. [Introduction to Cryptocurrencies](../lectures/01-intro-cryptocurrencies.pdf)
+  3. [An Overview of Haskell](../lectures/02-overview-haskell.pdf)
+- Assignment: [Introduction](https://classroom.github.com/a/ZFu9YQF5)
+- Recording:
+  [video](https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1OVoowel76o5tedNLYxxCyPN6qopGD6wK/view?usp=sharing)
 
-Homework is due at midnight at the end of the day listed.
+### 2nd Session (22-july-2020)
+
+- Slides: [Datatypes & Functions](../lectures/03-datatypes-functions.pdf)
+- Assignment: [Datatypes & Functions](https://classroom.github.com/a/YjmNAnkP)
+- Recording:
+  [video](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing)
+
+## Notes
+
+### Assignments
+
+Homework are due at midnight at the end of the day listed.
 All homework submission is via GitHub classroom.
 If you have questions, check this video:
 [How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
 
-1. [Introduction](https://classroom.github.com/a/ZFu9YQF5)
-2. [Datatypes & Functions](https://classroom.github.com/a/YjmNAnkP)
-
-## Tests
+### Tests
 
 Every two weeks there will be a little exam.
 Don't worry, it's the same technique as the homeworks,
 the only difference is that here the time windows is shorter and
 that you will work alone, not in a team.
-
-## Meeting Recordings & Chats
-
-- 20.07.2020 [recording](https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing)
-             [chat](https://drive.google.com/file/d/1OVoowel76o5tedNLYxxCyPN6qopGD6wK/view?usp=sharing)
-- 22.07.2020 [recording](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing)
-             [chat](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing)
