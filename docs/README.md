@@ -93,9 +93,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 ### 3rd Session (24-July-2020)
 
-- Slides:
-  1. [Polymorphism & Type Classes](../lectures/04-polymorphism-type-classes.pdf)
-  2. [Packaging & Tools](../lectures/05-packaging-and-tools.pdf)
+- Slides: [Polymorphism & Type Classes](../lectures/04-polymorphism-type-classes.pdf)
 
 ## Notes
 
