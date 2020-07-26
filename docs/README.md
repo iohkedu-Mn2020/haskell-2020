@@ -98,6 +98,13 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
   [video](https://drive.google.com/file/d/11MVm_fiqpaEFavEOSXKQ6zBuSRRp5MCE/view?usp=sharing) /
   [chat](https://drive.google.com/file/d/1E3fRkTX5-NhUHP1YFC01Dtt2s8AYCrjL/view?usp=sharing)
 
+### 4th Session (27-July-2020)
+
+- Slides:
+  1. [Higher-Order Functions](../lectures/05-higher-order-functions.pdf)
+  2. [Packaging & Tools](../lectures/06-packaging-and-tools.pdf)
+- Assignment: [Higher-Order Functions](https://classroom.github.com/a/8_VyrI5G)
+
 ## Notes
 
 ### Assignments
