@@ -104,7 +104,10 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
   1. [Higher-Order Functions](../lectures/05-higher-order-functions.pdf)
   2. [Packaging & Tools](../lectures/06-packaging-and-tools.pdf)
 - Assignment: [Higher-Order Functions](https://classroom.github.com/a/8_VyrI5G)
-
+- Recording:
+  [video](https://drive.google.com/file/d/1CzKVzIwuNVvtbZk30VOKaEb2paCxAD_r/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1KaWzbrCgNBXL9gUGsgYO198orrHhYtUN/view?usp=sharing)
+  
 ## Notes
 
 ### Assignments
