@@ -78,7 +78,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
   1. [Welcome](../lectures/00-welcome.pdf)
   2. [Introduction to Cryptocurrencies](../lectures/01-intro-cryptocurrencies.pdf)
   3. [An Overview of Haskell](../lectures/02-overview-haskell.pdf)
-- Assignment: [Introduction](https://classroom.github.com/a/ZFu9YQF5)
+- Assignment: [Introduction](https://classroom.github.com/a/ZFu9YQF5) (Deadline Monday July 27, 23:59 UTC)
 - Recording:
   [video](https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing) /
   [chat](https://drive.google.com/file/d/1OVoowel76o5tedNLYxxCyPN6qopGD6wK/view?usp=sharing)
@@ -86,7 +86,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 ### 2nd Session (22-July-2020)
 
 - Slides: [Datatypes & Functions](../lectures/03-datatypes-functions.pdf)
-- Assignment: [Datatypes & Functions](https://classroom.github.com/a/YjmNAnkP)
+- Assignment: [Datatypes & Functions](https://classroom.github.com/a/YjmNAnkP) (Deadline Wednesday July 29, 23:59 UTC)
 - Recording:
   [video](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing) /
   [chat](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing)
@@ -103,7 +103,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 - Slides:
   1. [Higher-Order Functions](../lectures/05-higher-order-functions.pdf)
   2. [Packaging & Tools](../lectures/06-packaging-and-tools.pdf)
-- Assignment: [Higher-Order Functions](https://classroom.github.com/a/8_VyrI5G)
+- Assignment: [Higher-Order Functions](https://classroom.github.com/a/8_VyrI5G) (Deadline Monday August 3rd, 23:59 UTC)
 - Recording:
   [video](https://drive.google.com/file/d/1CzKVzIwuNVvtbZk30VOKaEb2paCxAD_r/view?usp=sharing) /
   [chat](https://drive.google.com/file/d/1KaWzbrCgNBXL9gUGsgYO198orrHhYtUN/view?usp=sharing)
