@@ -128,3 +128,5 @@ Every two weeks there will be a little exam.
 Don't worry, it's the same technique as the homeworks,
 the only difference is that here the time windows is shorter and
 that you will work alone, not in a team.
+
+- 29-July-2020, 12:30 - 14:30 MNG [t1](https://classroom.github.com/a/C4Juj31P)
