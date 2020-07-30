@@ -112,6 +112,9 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 - Slides: [IO](../lectures/07-io.pdf)
 - Assignment: [IO](https://classroom.github.com/a/_eDITQUZ)
+- Recording:
+  [video](https://drive.google.com/file/d/1WuTl_Z_xvmZJv0AD0vlQYs63ja68gFfz/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/11H2lVjCV60GXJVSt3zl5XX66QXDGHIhc/view?usp=sharing)
 
 ## Notes
 
