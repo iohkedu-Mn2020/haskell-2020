@@ -129,7 +129,7 @@ All homework submission is via GitHub classroom.
 If you have questions, check this video:
 [How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
 
-- [w01](https://classroom.github.com/g/GZPFmDbA), due 7-August-2020
+- [w01](https://classroom.github.com/g/GZPFmDbA), due 7-August-2020, 12:30 MNG
 
 ### Tests
 
