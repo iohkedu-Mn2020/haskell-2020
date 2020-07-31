@@ -116,6 +116,10 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
   [video](https://drive.google.com/file/d/1WuTl_Z_xvmZJv0AD0vlQYs63ja68gFfz/view?usp=sharing) /
   [chat](https://drive.google.com/file/d/11H2lVjCV60GXJVSt3zl5XX66QXDGHIhc/view?usp=sharing)
 
+### 6th Session (31-July-2020)
+
+- Slides: [Testing](../letures/08-testing.pdf)
+
 ## Notes
 
 ### Assignments
@@ -124,6 +128,8 @@ Homework are due at midnight at the end of the day listed.
 All homework submission is via GitHub classroom.
 If you have questions, check this video:
 [How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
+
+- [w01](https://classroom.github.com/g/GZPFmDbA)
 
 ### Tests
 
