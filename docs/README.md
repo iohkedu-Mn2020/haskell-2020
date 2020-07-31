@@ -124,12 +124,12 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 ### Assignments
 
-Homework are due at midnight at the end of the day listed.
+Homework are due on Fridays before the lecture, one week after they have been handed out.
 All homework submission is via GitHub classroom.
 If you have questions, check this video:
 [How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
 
-- [w01](https://classroom.github.com/g/GZPFmDbA)
+- [w01](https://classroom.github.com/g/GZPFmDbA), due 7-August-2020
 
 ### Tests
 
