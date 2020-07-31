@@ -119,6 +119,9 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 ### 6th Session (31-July-2020)
 
 - Slides: [Testing](../lectures/08-testing.pdf)
+- Recording:
+  [video](https://drive.google.com/file/d/1UXqmBjNMPuJxHbsAMTDnihdnw6IZRt73/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1ueiGfD0fjbLJh6nHcg33Rtb_zLAZsRyV/view?usp=sharing)
 
 ## Notes
 
