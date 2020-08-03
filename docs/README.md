@@ -126,6 +126,9 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 ### 7th Session (03-August-2020)
 
 - Slides: [Abstraction Patterns](../lectures/09-abstraction-patterns.pdf)
+- Recording:
+  [video](https://drive.google.com/file/d/1pfgRzEeioNNWM__AvQ_FPczdy08-ON0W/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1NS35BfBXdpFv1MSW6sP1lWPOMEqafeUr/view?usp=sharing)
 
 ## Notes
 
