@@ -8,8 +8,6 @@
   - [Andres Löh](http://www.well-typed.com/people/andres/)
 - **TA**
   - [Alejandro García](https://iohk.io/en/team/alejandro-garcia)
-- [Students portal](https://github.com/iohkedu/haskell-mongolia-2020)
-
 
 ## Course Description
 
@@ -24,60 +22,130 @@ consist of several special topics that explore advanced features of
 Haskell. Evaluation will be based on class participation, weekly
 programming assignments, and an open-ended final project.
 
-## Lectures
+## Getting the Software
 
-- [00-welcome.pdf](../lectures/00-welcome.pdf)
-- [01-intro-cryptocurrencies.pdf](../lectures/01-intro-cryptocurrencies.pdf)
-- [02-overview-haskell.pdf](../lectures/02-overview-haskell.pdf)
-- [03-datatypes-functions.pdf](../lectures/03-datatypes-functions.pdf)
-- [04-packaging-and-tools.pdf](../lectures/04-packaging-and-tools.pdf)
-- [05-polymorphism-type-classes.pdf](../lectures/05-polymorphism-type-classes.pdf)
-- [06-io.pdf](../lectures/06-io.pdf)
-- [07-higher-order-functions.pdf](../lectures/07-higher-order-functions.pdf)
-- [08-testing.pdf](../lectures/08-testing.pdf)
-- [09-abstraction-patterns.pdf](../lectures/09-abstraction-patterns.pdf)
-- [10-concurrency.pdf](../lectures/10-concurrency.pdf)
-- [11-servers.pdf](../lectures/11-servers.pdf)
-- [12-laws-proofs.pdf](../lectures/12-laws-proofs.pdf)
-- [13-parser-combinators.pdf](../lectures/13-parser-combinators.pdf)
-- [14-more-parsing.pdf](../lectures/14-more-parsing.pdf)
-- [15-data-structures.pdf](../lectures/15-data-structures.pdf)
-- [16-more-data-structures.pdf](../lectures/16-more-data-structures.pdf)
-- [17-lambda-calculus.pdf](../lectures/17-lambda-calculus.pdf)
-- [18-optics.pdf](../lectures/18-optics.pdf)
-- [19-more-monads.pdf](../lectures/19-more-monads.pdf)
-- [20-free-monads.pdf](../lectures/20-free-monads.pdf)
-- [21-type-system.pdf](../lectures/21-type-system.pdf)
-- [22-streaming.pdf](../lectures/22-streaming.pdf)
-- [23-more-optics.pdf](../lectures/23-more-optics.pdf)
-- [24-more-streaming.pdf](../lectures/24-more-streaming.pdf)
-- [25-generic-programming.pdf](../lectures/25-generic-programming.pdf)
-- [26-system-f-core.pdf](../lectures/26-system-f-core.pdf)
+You will need `ghc` (the Haskell compiler; at least version 8.6.5, preferably
+version 8.10.1), `cabal` (a build tool for Haskell; at least version 2.4.1,
+preferably version 3.2), and a suitable development editor to edit source files
+with (e.g. Visual Studio Code, or (neo)vim).
 
-## Assignments
+Instructions on how to install the necessary software are available [here](https://github.com/zfoh/haskell-simple-install/blob/master/README.md),
+separated by platform (Linux, MacOS, Windows).
 
-Homework is due at midnight at the end of the day listed.
-All homework submission is via GitHub classrom.
+These instructions also include information on how to set up more advanced IDE-like
+editor support for Visual Studio Code, in the form of `ghcide`. While this will be
+helpful in the long run, it is not mandatory, and if you experience problems setting
+this up, don't worry for now.
 
-TODO: Sort this list in chronological order
+## How to get help
 
-- [02-Introduction](https://classroom.github.com/a/ZFu9YQF5)
-- [03-datatypes](https://classroom.github.com/a/YjmNAnkP)
-- [06-io](https://classroom.github.com/a/_eDITQUZ)
-- [07-higher-order](https://classroom.github.com/a/8_VyrI5G)
-- [18-optics](https://classroom.github.com/a/64scxO2N)
-- [23-more-optics-iso-exercise](https://classroom.github.com/a/X_vqmbZ-)
-- [23-more-optics-prism-exercise](https://classroom.github.com/a/ndNOA6ql)
-- [Weekly Lab 1](https://classroom.github.com/a/3-NL1Dm1)
-- [Weekly Lab 2](https://classroom.github.com/a/C_4fj1Wl)
-- [Weekly Lab 2 Project 1](https://classroom.github.com/g/VOXxjQGX)
-- [Weekly Lab 3](https://classroom.github.com/a/DbLddfGO)
-- [Weekly Lab 4](https://classroom.github.com/a/JeyoZcf9)
-- [Weekly Lab 5](https://classroom.github.com/a/dbjJDHTT)
-- [Weekly Lab 5 Project 2](https://classroom.github.com/g/DbMcQk3d)
+### Students portal
 
-## Tests
+Is the first source of information. Here you will find
+lecture, notes, exercises, etc.
+Visit it in: [haskell-mongolia-2020](https://github.com/iohkedu/haskell-mongolia-2020)
+
+### Content Questions
+
+Questions like:
+
+- How do I install Haskell on Windows? [video](https://drive.google.com/file/d/1vxSk3Qeb_SyCNuwvs6jpQRmM2BNrVRro/view?usp=sharing)
+- Which text editor should I use?
+- What is a Cabal Package?
+  It should go in: [Stackoverflow IohkEdu](https://stackoverflow.com/c/iohkedu/questions)
+  On stackoverflow team students are _encouraged_ to answer each others questions.
+
+[Alejandro Garcia](alejandro.garcia@iohk.io) will monitor the forum closely
+so that we don't let questions go unanswered.
+
+### Defects
+
+If you found a defect in one of the sample programs.
+Or maybe a typo in one of the slides we will really appreciate it
+if you could post it as an issue on GitHub Itself.
+Report defecs in: [haskell-mongolia-2020/issues](https://github.com/iohkedu/haskell-mongolia-2020/issues)
+
+### Administrative Questions
+
+Related to the Lab in Mongolia should be directed to:
+Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
+
+## Class
+
+### 1st Session (20-July-2020)
+
+- Slides:
+  1. [Welcome](../lectures/00-welcome.pdf)
+  2. [Introduction to Cryptocurrencies](../lectures/01-intro-cryptocurrencies.pdf)
+  3. [An Overview of Haskell](../lectures/02-overview-haskell.pdf)
+- Assignment: [Introduction](https://classroom.github.com/a/ZFu9YQF5)
+- Recording:
+  [video](https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1OVoowel76o5tedNLYxxCyPN6qopGD6wK/view?usp=sharing)
+
+### 2nd Session (22-July-2020)
+
+- Slides: [Datatypes & Functions](../lectures/03-datatypes-functions.pdf)
+- Assignment: [Datatypes & Functions](https://classroom.github.com/a/YjmNAnkP)
+- Recording:
+  [video](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing)
+
+### 3rd Session (24-July-2020)
+
+- Slides: [Polymorphism & Type Classes](../lectures/04-polymorphism-type-classes.pdf)
+- Recording:
+  [video](https://drive.google.com/file/d/11MVm_fiqpaEFavEOSXKQ6zBuSRRp5MCE/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1E3fRkTX5-NhUHP1YFC01Dtt2s8AYCrjL/view?usp=sharing)
+
+### 4th Session (27-July-2020)
+
+- Slides:
+  1. [Higher-Order Functions](../lectures/05-higher-order-functions.pdf)
+  2. [Packaging & Tools](../lectures/06-packaging-and-tools.pdf)
+- Assignment: [Higher-Order Functions](https://classroom.github.com/a/8_VyrI5G)
+- Recording:
+  [video](https://drive.google.com/file/d/1CzKVzIwuNVvtbZk30VOKaEb2paCxAD_r/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1KaWzbrCgNBXL9gUGsgYO198orrHhYtUN/view?usp=sharing)
+
+### 5th Session (29-July-2020)
+
+- Slides: [IO](../lectures/07-io.pdf)
+- Assignment: [IO](https://classroom.github.com/a/_eDITQUZ)
+- Recording:
+  [video](https://drive.google.com/file/d/1WuTl_Z_xvmZJv0AD0vlQYs63ja68gFfz/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/11H2lVjCV60GXJVSt3zl5XX66QXDGHIhc/view?usp=sharing)
+
+### 6th Session (31-July-2020)
+
+- Slides: [Testing](../lectures/08-testing.pdf)
+- Recording:
+  [video](https://drive.google.com/file/d/1UXqmBjNMPuJxHbsAMTDnihdnw6IZRt73/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1ueiGfD0fjbLJh6nHcg33Rtb_zLAZsRyV/view?usp=sharing)
+
+### 7th Session (03-August-2020)
+
+- Slides: [Abstraction Patterns](../lectures/09-abstraction-patterns.pdf)
+- Recording:
+  [video](https://drive.google.com/file/d/1pfgRzEeioNNWM__AvQ_FPczdy08-ON0W/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1NS35BfBXdpFv1MSW6sP1lWPOMEqafeUr/view?usp=sharing)
+
+## Notes
+
+### Assignments
+
+Homework are due on Fridays before the lecture, one week after they have been handed out.
+All homework submission is via GitHub classroom.
+If you have questions, check this video:
+[How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
+
+- [w01](https://classroom.github.com/g/GZPFmDbA), due 7-August-2020, 12:30 MNG
+
+### Tests
 
 Every two weeks there will be a little exam.
-Don't worry it's the same tecnique as the homeworks
-the only difference is that here the time windows is shorter.
+Don't worry, it's the same technique as the homeworks,
+the only difference is that here the time windows is shorter and
+that you will work alone, not in a team.
+
+- 29-July-2020, 12:30 - 14:30 MNG [t1](https://classroom.github.com/a/C4Juj31P)
