@@ -130,6 +130,10 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
   [video](https://drive.google.com/file/d/1pfgRzEeioNNWM__AvQ_FPczdy08-ON0W/view?usp=sharing) /
   [chat](https://drive.google.com/file/d/1NS35BfBXdpFv1MSW6sP1lWPOMEqafeUr/view?usp=sharing)
 
+### 8th Session (05-August-2020)
+
+- Slides: [Concurrency](../lectures/10-concurrency.pdf)
+
 ## Notes
 
 ### Assignments
