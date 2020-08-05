@@ -133,6 +133,9 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 ### 8th Session (05-August-2020)
 
 - Slides: [Concurrency](../lectures/10-concurrency.pdf)
+- Recording:
+  [video](https://drive.google.com/file/d/1r36dUeCLBZdU69CoM-OFIggicXVMEcwk/view?usp=sharing) /
+  [chat](https://drive.google.com/file/d/1tj4964piFXiNVhFvAhJEt8VmksFKH7VR/view?usp=sharing)
 
 ## Notes
 
