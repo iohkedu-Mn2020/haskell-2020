@@ -72,70 +72,51 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 ## Class
 
-### 1st Session (20-July-2020)
+| Date       | Title                                 | Video       | Chat       | Assignment                   |
+| ---------- | ------------------------------------- | ----------- | ---------- | ---------------------------- |
+| 20.07.2020 | [Welcome][1]                          | [video][1]  | [chat][2]  |                              |
+|            | [Introduction to Cryptocurrencies][4] |             |            |                              |
+|            | [An Overview of Haskell][5]           |             |            | [Introduction][6]            |
+| 22.07.2020 | [Datatypes & Functions][7]            | [video][8]  | [chat][9]  | [Datatypes & Functions][10]  |
+| 24.07.2020 | [Polymorphism & Type Classes][11]     | [video][12] | [chat][13] |                              |
+| 27.07.2020 | [Higher-Order Functions][14]          | [video][15] | [chat][16] | [Higher-Order Functions][17] |
+|            | [Packaging & Tools][18]               |             |            |                              |
+| 29.07.2020 | [IO][19]                              | [video][20] | [chat][21] | [IO][22]                     |
+| 31.07.2020 | [Testing][23]                         | [video][24] | [chat][25] |                              |
+| 03.08.2020 | [Abstraction Patterns][26]            | [video][27] | [chat][28] |                              |
+| 05.08.2020 | [Concurrency][29]                     | [video][30] | [chat][31] |                              |
 
-- Slides:
-  1. [Welcome](../lectures/00-welcome.pdf)
-  2. [Introduction to Cryptocurrencies](../lectures/01-intro-cryptocurrencies.pdf)
-  3. [An Overview of Haskell](../lectures/02-overview-haskell.pdf)
-- Assignment: [Introduction](https://classroom.github.com/a/ZFu9YQF5)
-- Recording:
-  [video](https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing) /
-  [chat](https://drive.google.com/file/d/1OVoowel76o5tedNLYxxCyPN6qopGD6wK/view?usp=sharing)
-
-### 2nd Session (22-July-2020)
-
-- Slides: [Datatypes & Functions](../lectures/03-datatypes-functions.pdf)
-- Assignment: [Datatypes & Functions](https://classroom.github.com/a/YjmNAnkP)
-- Recording:
-  [video](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing) /
-  [chat](https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing)
-
-### 3rd Session (24-July-2020)
-
-- Slides: [Polymorphism & Type Classes](../lectures/04-polymorphism-type-classes.pdf)
-- Recording:
-  [video](https://drive.google.com/file/d/11MVm_fiqpaEFavEOSXKQ6zBuSRRp5MCE/view?usp=sharing) /
-  [chat](https://drive.google.com/file/d/1E3fRkTX5-NhUHP1YFC01Dtt2s8AYCrjL/view?usp=sharing)
-
-### 4th Session (27-July-2020)
-
-- Slides:
-  1. [Higher-Order Functions](../lectures/05-higher-order-functions.pdf)
-  2. [Packaging & Tools](../lectures/06-packaging-and-tools.pdf)
-- Assignment: [Higher-Order Functions](https://classroom.github.com/a/8_VyrI5G)
-- Recording:
-  [video](https://drive.google.com/file/d/1CzKVzIwuNVvtbZk30VOKaEb2paCxAD_r/view?usp=sharing) /
-  [chat](https://drive.google.com/file/d/1KaWzbrCgNBXL9gUGsgYO198orrHhYtUN/view?usp=sharing)
-
-### 5th Session (29-July-2020)
-
-- Slides: [IO](../lectures/07-io.pdf)
-- Assignment: [IO](https://classroom.github.com/a/_eDITQUZ)
-- Recording:
-  [video](https://drive.google.com/file/d/1WuTl_Z_xvmZJv0AD0vlQYs63ja68gFfz/view?usp=sharing) /
-  [chat](https://drive.google.com/file/d/11H2lVjCV60GXJVSt3zl5XX66QXDGHIhc/view?usp=sharing)
-
-### 6th Session (31-July-2020)
-
-- Slides: [Testing](../lectures/08-testing.pdf)
-- Recording:
-  [video](https://drive.google.com/file/d/1UXqmBjNMPuJxHbsAMTDnihdnw6IZRt73/view?usp=sharing) /
-  [chat](https://drive.google.com/file/d/1ueiGfD0fjbLJh6nHcg33Rtb_zLAZsRyV/view?usp=sharing)
-
-### 7th Session (03-August-2020)
-
-- Slides: [Abstraction Patterns](../lectures/09-abstraction-patterns.pdf)
-- Recording:
-  [video](https://drive.google.com/file/d/1pfgRzEeioNNWM__AvQ_FPczdy08-ON0W/view?usp=sharing) /
-  [chat](https://drive.google.com/file/d/1NS35BfBXdpFv1MSW6sP1lWPOMEqafeUr/view?usp=sharing)
-
-### 8th Session (05-August-2020)
-
-- Slides: [Concurrency](../lectures/10-concurrency.pdf)
-- Recording:
-  [video](https://drive.google.com/file/d/1r36dUeCLBZdU69CoM-OFIggicXVMEcwk/view?usp=sharing) /
-  [chat](https://drive.google.com/file/d/1tj4964piFXiNVhFvAhJEt8VmksFKH7VR/view?usp=sharing)
+[1]:   ../lectures/00-welcome.pdf
+[2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
+[3]:   https://drive.google.com/file/d/1OVoowel76o5tedNLYxxCyPN6qopGD6wK/view?usp=sharing
+[4]:   ../lectures/01-intro-cryptocurrencies.pdf
+[5]:   ../lectures/02-overview-haskell.pdf
+[6]:   https://classroom.github.com/a/ZFu9YQF5
+[7]:  ../lectures/03-datatypes-functions.pdf
+[8]:   https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing
+[9]:   https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing
+[10]:  https://classroom.github.com/a/YjmNAnkP
+[11]:  ../lectures/04-polymorphism-type-classes.pdf
+[12]:  https://drive.google.com/file/d/11MVm_fiqpaEFavEOSXKQ6zBuSRRp5MCE/view?usp=sharing
+[13]:  https://drive.google.com/file/d/1E3fRkTX5-NhUHP1YFC01Dtt2s8AYCrjL/view?usp=sharing
+[14]:  ../lectures/05-higher-order-functions.pdf
+[15]:  https://drive.google.com/file/d/1CzKVzIwuNVvtbZk30VOKaEb2paCxAD_r/view?usp=sharing
+[16]:  https://drive.google.com/file/d/1KaWzbrCgNBXL9gUGsgYO198orrHhYtUN/view?usp=sharing
+[17]:  https://classroom.github.com/a/8_VyrI5G
+[18]:  ../lectures/06-packaging-and-tools.pdf
+[19]:  ../lectures/07-io.pdf
+[20]:  https://drive.google.com/file/d/1WuTl_Z_xvmZJv0AD0vlQYs63ja68gFfz/view?usp=sharing
+[21]:  https://drive.google.com/file/d/11H2lVjCV60GXJVSt3zl5XX66QXDGHIhc/view?usp=sharing
+[22]:  https://classroom.github.com/a/_eDITQUZ
+[23]:  ../lectures/08-testing.pdf
+[24]:  https://drive.google.com/file/d/1UXqmBjNMPuJxHbsAMTDnihdnw6IZRt73/view?usp=sharing
+[25]:  https://drive.google.com/file/d/1ueiGfD0fjbLJh6nHcg33Rtb_zLAZsRyV/view?usp=sharing
+[26]:  ../lectures/09-abstraction-patterns.pdf
+[27]:  https://drive.google.com/file/d/1pfgRzEeioNNWM__AvQ_FPczdy08-ON0W/view?usp=sharing
+[28]:  https://drive.google.com/file/d/1NS35BfBXdpFv1MSW6sP1lWPOMEqafeUr/view?usp=sharing
+[29]:  ../lectures/10-concurrency.pdf
+[30]:  https://drive.google.com/file/d/1r36dUeCLBZdU69CoM-OFIggicXVMEcwk/view?usp=sharing
+[31]:  https://drive.google.com/file/d/1tj4964piFXiNVhFvAhJEt8VmksFKH7VR/view?usp=sharing
 
 ## Notes
 
