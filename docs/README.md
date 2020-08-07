@@ -85,6 +85,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 31.07.2020 | [Testing][23]                         | [video][24] | [chat][25] |                              |
 | 03.08.2020 | [Abstraction Patterns][26]            | [video][27] | [chat][28] |                              |
 | 05.08.2020 | [Concurrency][29]                     | [video][30] | [chat][31] |                              |
+| 07.08.2020 | [Network Servers][32]                 |             |            |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -117,6 +118,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [29]:  ../lectures/10-concurrency.pdf
 [30]:  https://drive.google.com/file/d/1r36dUeCLBZdU69CoM-OFIggicXVMEcwk/view?usp=sharing
 [31]:  https://drive.google.com/file/d/1tj4964piFXiNVhFvAhJEt8VmksFKH7VR/view?usp=sharing
+[32]:  ../lectures/11-servers.pdf
 
 ## Notes
 
@@ -128,6 +130,8 @@ If you have questions, check this video:
 [How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
 
 - [w01](https://classroom.github.com/g/GZPFmDbA), due 7-August-2020, 12:30 MNG
+- [w02](https://classroom.github.com/g/ZSww0ngM), due 14-August-2020, 12:30 MNG
+- [p1](https://classroom.github.com/g/pQ5wHPtj), due 21-August-2020, 12:30 MNG
 
 ### Tests
 
