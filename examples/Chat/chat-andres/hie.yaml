@@ -1,0 +1,6 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:chat"
+    - path: "./app/Main.hs"
+      component: "exe:chat"

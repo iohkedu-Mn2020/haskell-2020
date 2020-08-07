@@ -85,7 +85,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 31.07.2020 | [Testing][23]                         | [video][24] | [chat][25] |                              |
 | 03.08.2020 | [Abstraction Patterns][26]            | [video][27] | [chat][28] |                              |
 | 05.08.2020 | [Concurrency][29]                     | [video][30] | [chat][31] |                              |
-| 07.08.2020 | [Network Servers][32]                 |             |            |                              |
+| 07.08.2020 | [Network Servers][32]                 | [video][33] | [chat][34] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -119,6 +119,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [30]:  https://drive.google.com/file/d/1r36dUeCLBZdU69CoM-OFIggicXVMEcwk/view?usp=sharing
 [31]:  https://drive.google.com/file/d/1tj4964piFXiNVhFvAhJEt8VmksFKH7VR/view?usp=sharing
 [32]:  ../lectures/11-servers.pdf
+[33]:  https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing
+[34]:  https://drive.google.com/file/d/1didVeqSJ9Z_UeX-mCvV8RS4FYsFQTRQu/view?usp=sharing
 
 ## Notes
 
