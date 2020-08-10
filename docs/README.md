@@ -86,7 +86,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 03.08.2020 | [Abstraction Patterns][26]            | [video][27] | [chat][28] |                              |
 | 05.08.2020 | [Concurrency][29]                     | [video][30] | [chat][31] |                              |
 | 07.08.2020 | [Network Servers][32]                 | [video][33] | [chat][34] |                              |
-| 10.08.2020 | [Parser Combinators][35]              |             |            |                              |
+| 10.08.2020 | [Parser Combinators][35]              | [video][36] | [chat][37] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -123,6 +123,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [33]:  https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing
 [34]:  https://drive.google.com/file/d/1didVeqSJ9Z_UeX-mCvV8RS4FYsFQTRQu/view?usp=sharing
 [35]:  ../lectures/12-parser-combinators.pdf
+[36]:  https://drive.google.com/file/d/14PIL_2ZhROoR1QBkH5851FEP7tv0UG_z/view?usp=sharing
+[37]:  https://drive.google.com/file/d/14FTpgRSN5Y5qqPXekADKG1eWGv31P7hZ/view?usp=sharing
 
 ## Notes
 
