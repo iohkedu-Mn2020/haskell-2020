@@ -124,6 +124,9 @@ instance Foldable NonEmpty where
 -- >>> insert 'y' 2 $ M.fromList [('x', [1]), ('y', [3])]
 -- fromList [('x',[1]),('y',[2,3])]
 --
+-- >>> insert 'y' 2 $ M.fromList [('x', [1])]
+-- fromList [('x',[1]),('y',[2])]
+--
 insert :: Ord k => k -> v -> Map k [v] -> Map k [v]
 insert k v = M.alter f k
   where
