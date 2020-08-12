@@ -87,6 +87,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 05.08.2020 | [Concurrency][29]                     | [video][30] | [chat][31] |                              |
 | 07.08.2020 | [Network Servers][32]                 | [video][33] | [chat][34] |                              |
 | 10.08.2020 | [Parser Combinators][35]              | [video][36] | [chat][37] |                              |
+| 12.08.2020 | [More on Parsing][38]                 |             |            |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -125,6 +126,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [35]:  ../lectures/12-parser-combinators.pdf
 [36]:  https://drive.google.com/file/d/14PIL_2ZhROoR1QBkH5851FEP7tv0UG_z/view?usp=sharing
 [37]:  https://drive.google.com/file/d/14FTpgRSN5Y5qqPXekADKG1eWGv31P7hZ/view?usp=sharing
+[38]:  ../lectures/13-more-parsing.pdf
 
 ## Notes
 
@@ -146,4 +148,6 @@ Don't worry, it's the same technique as the homeworks,
 the only difference is that here the time windows is shorter and
 that you will work alone, not in a team.
 
-- 29-July-2020, 12:30 - 14:30 MNG [t1](https://classroom.github.com/a/C4Juj31P)
+| Date       | Time              | Test
+| ---------- | ----------------- | --------------------------------------------- |
+| 29.07.2020 | 12:30 - 14:30 MNG | [t1](https://classroom.github.com/a/C4Juj31P) |
