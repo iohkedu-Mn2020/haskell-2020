@@ -151,3 +151,4 @@ that you will work alone, not in a team.
 | Date       | Time              | Test
 | ---------- | ----------------- | --------------------------------------------- |
 | 29.07.2020 | 12:30 - 14:30 MNG | [t1](https://classroom.github.com/a/C4Juj31P) |
+| 12.08.2020 | 12:30 - 14:30 MNG | [t2](https://classroom.github.com/a/dHzLBhZ_) |
