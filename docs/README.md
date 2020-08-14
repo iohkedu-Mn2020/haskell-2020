@@ -88,7 +88,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 07.08.2020 | [Network Servers][32]                 | [video][33] | [chat][34] |                              |
 | 10.08.2020 | [Parser Combinators][35]              | [video][36] | [chat][37] |                              |
 | 12.08.2020 | [More on Parsing][38]                 | [video][39] | [chat][40] |                              |
-| 14.08.2020 | [Data Structures][41]                 |             |            |                              |
+| 14.08.2020 | [Data Structures][41]                 | [video][42] | [chat][43] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -131,6 +131,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [39]:  https://drive.google.com/file/d/1dZoaL0NQHpvNqni27kD4o0cW_uUMnumK/view?usp=sharing
 [40]:  https://drive.google.com/file/d/1Rm6gx2qCCTXZMKNqEtXhWnfPhsUYUXSw/view?usp=sharing
 [41]:  ../lectures/14-data-structures.pdf
+[42]:  https://drive.google.com/file/d/1yfLx1ZZax_2ftcDJSrUnqHJavFaVmKDW/view?usp=sharing
+[43]:  https://drive.google.com/file/d/1GUkcECr4NIXuLE8JC78bMABDvlxhjBJU/view?usp=sharing
 
 ## Notes
 

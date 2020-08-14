@@ -1,0 +1,14 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:w02"
+    - path: "./app/W020201.hs"
+      component: "exe:w020201"
+    - path: "./app/W020202.hs"
+      component: "exe:w020202"
+    - path: "./app/W020203.hs"
+      component: "exe:w020203"
+    - path: "./test"
+      component: "test:w02-tests"
+    - path: "./doctest"
+      component: "test:w02-doctests"
