@@ -122,7 +122,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [30]:  https://drive.google.com/file/d/1r36dUeCLBZdU69CoM-OFIggicXVMEcwk/view?usp=sharing
 [31]:  https://drive.google.com/file/d/1tj4964piFXiNVhFvAhJEt8VmksFKH7VR/view?usp=sharing
 [32]:  ../lectures/11-servers.pdf
-[33]:  https://drive.google.com/file/d/127LklblBCX-2VsHKy3cHWeXWyhFr5lma/view?usp=sharing
+[33]:  https://drive.google.com/file/d/1_Po9UjEOO9TW0VUjxXgQNd1R9x-TtjB8/view?usp=sharing
 [34]:  https://drive.google.com/file/d/1didVeqSJ9Z_UeX-mCvV8RS4FYsFQTRQu/view?usp=sharing
 [35]:  ../lectures/12-parser-combinators.pdf
 [36]:  https://drive.google.com/file/d/14PIL_2ZhROoR1QBkH5851FEP7tv0UG_z/view?usp=sharing
