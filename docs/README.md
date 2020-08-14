@@ -88,6 +88,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 07.08.2020 | [Network Servers][32]                 | [video][33] | [chat][34] |                              |
 | 10.08.2020 | [Parser Combinators][35]              | [video][36] | [chat][37] |                              |
 | 12.08.2020 | [More on Parsing][38]                 | [video][39] | [chat][40] |                              |
+| 14.08.2020 | [Data Structures][41]                 |             |            |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -129,6 +130,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [38]:  ../lectures/13-more-parsing.pdf
 [39]:  https://drive.google.com/file/d/1dZoaL0NQHpvNqni27kD4o0cW_uUMnumK/view?usp=sharing
 [40]:  https://drive.google.com/file/d/1Rm6gx2qCCTXZMKNqEtXhWnfPhsUYUXSw/view?usp=sharing
+[41]:  ../lectures/14-data-structures.pdf
 
 ## Notes
 
@@ -141,6 +143,7 @@ If you have questions, check this video:
 
 - [w01](https://classroom.github.com/g/GZPFmDbA), due 7-August-2020, 12:30 MNG
 - [w02](https://classroom.github.com/g/ZSww0ngM), due 14-August-2020, 12:30 MNG
+- [w03](https://classroom.github.com/g/Wc4HWmsI), due 21-August-2020, 12:30 MNG
 - [p1](https://classroom.github.com/g/pQ5wHPtj), due 21-August-2020, 12:30 MNG
 
 ### Tests
