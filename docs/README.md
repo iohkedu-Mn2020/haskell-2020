@@ -138,8 +138,6 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [45]:  https://drive.google.com/file/d/18jm_OhzdcBFNtdtZPqMNKOPJG8Licl6H/view?usp=sharing
 [46]:  https://drive.google.com/file/d/1-uUgA2bwLHf2Xg3ekGFgE5ITFaHN8ce0/view?usp=sharing
 
-## Notes
-
 ### Assignments
 
 Homework are due on Fridays before the lecture, one week after they have been handed out.
@@ -163,3 +161,12 @@ that you will work alone, not in a team.
 | ---------- | ----------------- | --------------------------------------------- |
 | 29.07.2020 | 12:30 - 14:30 MNG | [t1](https://classroom.github.com/a/C4Juj31P) |
 | 12.08.2020 | 12:30 - 14:30 MNG | [t2](https://classroom.github.com/a/dHzLBhZ_) |
+
+### Examples and Q&A
+
+| Date       | Video        | Chat        |
+| ---------- | ------------ | ----------- |
+| 18.08.2020 | [video][200] | [chat][201] |
+
+[200]: https://drive.google.com/file/d/1_dVRHFZgZhQE27HhDVRLq_QdvJAP1yK0/view?usp=sharing
+[201]: https://drive.google.com/file/d/1Wx-vzhmE4XiaocV2FrV5VtloG8xniDP8/view?usp=sharing
