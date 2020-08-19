@@ -181,7 +181,7 @@ We have read most of this books and they provide good information for beginners.
 
 1. Lipovača M. [Learn You A Haskell For Great Good!](http://learnyouahaskell.com/). San Francisco: No Starch Press; 2012.
 
->  Beginner Friendly book with lots of examples
+>  Beginner Friendly book with lots of examples.
 
 2. O'Sullivan B, Stewart D, Goerzen J. [Real World Haskell](http://book.realworldhaskell.org/). Farnham: O'Reilly; 2009.
 
@@ -189,7 +189,7 @@ We have read most of this books and they provide good information for beginners.
 
 3. Bird R. [Algorithm Design With Haskell](https://www.amazon.com/Algorithm-Design-Haskell-Richard-Bird-ebook/dp/B08BKXJ1N3/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1597814133&sr=8-1). Cambridge University Press; 2020.
 
->  Learn how far you can get with immutable data, to implemnet almost all standard algorithms
+>  Learn how far you can get with immutable data, to implement almost all standard algorithms.
 
 4. Thibaut C. [Texas Hold'em: The Little Haskeller](https://leanpub.com/texasholdem-tlh).leanpub.com; 2019.
 
