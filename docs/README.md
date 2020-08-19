@@ -90,7 +90,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 12.08.2020 | [More on Parsing][38]                 | [video][39] | [chat][40] |                              |
 | 14.08.2020 | [Data Structures][41]                 | [video][42] | [chat][43] |                              |
 | 17.08.2020 | [More on Data Structures][44]         | [video][45] | [chat][46] |                              |
-| 19.08.2020 | [Optics][47]                          |             |            |                              |
+| 19.08.2020 | [Optics][47]                          | [video][48] | [chat][49] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -139,6 +139,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [45]:  https://drive.google.com/file/d/18jm_OhzdcBFNtdtZPqMNKOPJG8Licl6H/view?usp=sharing
 [46]:  https://drive.google.com/file/d/1-uUgA2bwLHf2Xg3ekGFgE5ITFaHN8ce0/view?usp=sharing
 [47]:  ../lectures/16-optics.pdf
+[48]:  https://drive.google.com/file/d/17zdvG7jZGhUdS3jJYcAeOwmaVucGcIUq/view?usp=sharing
+[49]:  https://drive.google.com/file/d/1pVBmKqLSbmXDh0kwyqpPnQY9W9s9eFMQ/view?usp=sharing
 
 ### Assignments
 
