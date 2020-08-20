@@ -171,9 +171,12 @@ that you will work alone, not in a team.
 | Date       | Video        | Chat        |
 | ---------- | ------------ | ----------- |
 | 18.08.2020 | [video][200] | [chat][201] |
+| 20.08.2020 | [video][202] | [chat][203] |
 
 [200]: https://drive.google.com/file/d/1_dVRHFZgZhQE27HhDVRLq_QdvJAP1yK0/view?usp=sharing
 [201]: https://drive.google.com/file/d/1Wx-vzhmE4XiaocV2FrV5VtloG8xniDP8/view?usp=sharing
+[202]: https://drive.google.com/file/d/1TAWPyPOLN1AdOQggiCzbyCQYnrOswrhD/view?usp=sharing
+[203]: https://drive.google.com/file/d/1rDZmNo0wcnys_kljQYMb_ObNzP_R9wXo/view?usp=sharing
 
 ### Bibliography
 
