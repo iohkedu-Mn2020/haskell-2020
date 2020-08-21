@@ -91,6 +91,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 14.08.2020 | [Data Structures][41]                 | [video][42] | [chat][43] |                              |
 | 17.08.2020 | [More on Data Structures][44]         | [video][45] | [chat][46] |                              |
 | 19.08.2020 | [Optics][47]                          | [video][48] | [chat][49] |                              |
+| 21.08.2020 | [More Optics][50]                     |             |            |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -141,6 +142,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [47]:  ../lectures/16-optics.pdf
 [48]:  https://drive.google.com/file/d/17zdvG7jZGhUdS3jJYcAeOwmaVucGcIUq/view?usp=sharing
 [49]:  https://drive.google.com/file/d/1pVBmKqLSbmXDh0kwyqpPnQY9W9s9eFMQ/view?usp=sharing
+[50]:  ../lectures/17-more-optics.pdf
 
 ### Assignments
 
@@ -152,6 +154,7 @@ If you have questions, check this video:
 - [w01](https://classroom.github.com/g/GZPFmDbA), due 7-August-2020, 12:30 MNG
 - [w02](https://classroom.github.com/g/ZSww0ngM), due 14-August-2020, 12:30 MNG
 - [w03](https://classroom.github.com/g/Wc4HWmsI), due 21-August-2020, 12:30 MNG
+- [w04](https://classroom.github.com/g/3zLh1EOf), due 28-August-2020, 12:30 MNG
 - [p1](https://classroom.github.com/g/pQ5wHPtj), due 21-August-2020, 12:30 MNG
 
 ### Tests
