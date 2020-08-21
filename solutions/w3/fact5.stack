@@ -1,0 +1,21 @@
+{
+  push 5;
+  push 1;
+  swap;
+  loop {
+    dup;
+    ifzero {
+      pop;
+      halt
+    } {
+      swap;
+      over;
+      mul;
+      swap;
+      push 1;
+      neg;
+      add;
+      ret
+    }
+  }
+}

@@ -1,0 +1,37 @@
+name:                w03
+version:             0.1
+build-type:          Custom
+cabal-version:       >= 1.10
+extra-source-files:  README.md
+                   , fact5.stack
+
+custom-setup
+  setup-depends:
+      base
+    , Cabal
+    , cabal-doctest >=1.0.6 && <1.1
+
+library
+  hs-source-dirs:       src
+  Exposed-Modules:      W0301
+                      , W0302
+                      , W0303
+                      , W0304
+  build-depends:        base == 4.14.0.0
+                      , megaparsec
+                      , QuickCheck
+                      , void
+  default-language:     Haskell2010
+  ghc-options:          -Wall
+
+test-suite w03-doctests
+  type:                 exitcode-stdio-1.0
+  main-is:              doctests.hs
+  build-depends:
+                        base
+                      , base-compat      >= 0.10.5 && < 0.12
+                      , doctest          >= 0.15   && < 0.17
+                      , template-haskell
+  ghc-options:      -Wall -threaded
+  hs-source-dirs:   doctest
+  default-language: Haskell2010
