@@ -92,7 +92,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 17.08.2020 | [More on Data Structures][44]         | [video][45] | [chat][46] |                              |
 | 19.08.2020 | [Optics][47]                          | [video][48] | [chat][49] |                              |
 | 21.08.2020 | [More Optics][50]                     | [video][51] | [chat][52] |                              |
-| 24.08.2020 | [More on Monads][53]                  |             |            |                              |
+| 24.08.2020 | [More on Monads][53]                  | [video][54] | [chat][55] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -147,6 +147,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [51]:  https://drive.google.com/file/d/1diCeBDVNCxl97kFAF7S8V4jhqLHucLB0/view?usp=sharing
 [52]:  https://drive.google.com/file/d/1gbVNoOFhuQCUtDr79gswScrYNjiONUpb/view?usp=sharing
 [53]:  ../lectures/18-more-monads.pdf
+[54]:  https://drive.google.com/file/d/1WEbuxxFYZvThn5TOSaIgvfT7peSwBa6k/view?usp=sharing
+[55]:  https://drive.google.com/file/d/1hR91DeUj9FYqhFDZvko9nclWEgDVqr4O/view?usp=sharing
 
 ### Assignments
 
