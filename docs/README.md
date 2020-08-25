@@ -181,11 +181,14 @@ that you will work alone, not in a team.
 | ---------- | ------------ | ----------- |
 | 18.08.2020 | [video][200] | [chat][201] |
 | 20.08.2020 | [video][202] | [chat][203] |
+| 25.08.2020 | [video][204] | [chat][205] |
 
 [200]: https://drive.google.com/file/d/1_dVRHFZgZhQE27HhDVRLq_QdvJAP1yK0/view?usp=sharing
 [201]: https://drive.google.com/file/d/1Wx-vzhmE4XiaocV2FrV5VtloG8xniDP8/view?usp=sharing
 [202]: https://drive.google.com/file/d/1TAWPyPOLN1AdOQggiCzbyCQYnrOswrhD/view?usp=sharing
 [203]: https://drive.google.com/file/d/1rDZmNo0wcnys_kljQYMb_ObNzP_R9wXo/view?usp=sharing
+[204]: https://drive.google.com/file/d/1B3A_HhnJ7YsooKq5dcbdqm7n6QbO4myY/view?usp=sharing
+[205]: https://drive.google.com/file/d/1Vlc5BbO92EjNqvWmpMviZL5ARVI8kSu_/view?usp=sharing
 
 ### Bibliography
 
