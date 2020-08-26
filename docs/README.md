@@ -93,6 +93,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 19.08.2020 | [Optics][47]                          | [video][48] | [chat][49] |                              |
 | 21.08.2020 | [More Optics][50]                     | [video][51] | [chat][52] |                              |
 | 24.08.2020 | [More on Monads][53]                  | [video][54] | [chat][55] |                              |
+| 26.08.2020 | [Free Monads][56]                     |             |            |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -149,6 +150,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [53]:  ../lectures/18-more-monads.pdf
 [54]:  https://drive.google.com/file/d/1WEbuxxFYZvThn5TOSaIgvfT7peSwBa6k/view?usp=sharing
 [55]:  https://drive.google.com/file/d/1hR91DeUj9FYqhFDZvko9nclWEgDVqr4O/view?usp=sharing
+[56]:  ../lectures/19-free-monads.pdf
 
 ### Assignments
 
@@ -174,6 +176,7 @@ that you will work alone, not in a team.
 | ---------- | ----------------- | --------------------------------------------- |
 | 29.07.2020 | 12:30 - 14:30 MNG | [t1](https://classroom.github.com/a/C4Juj31P) |
 | 12.08.2020 | 12:30 - 14:30 MNG | [t2](https://classroom.github.com/a/dHzLBhZ_) |
+| 26.08.2020 | 12:30 - 14:30 MNG | [t3](https://classroom.github.com/a/AqhOUQ2e) |
 
 ### Examples and Q&A
 
