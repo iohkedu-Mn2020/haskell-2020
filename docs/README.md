@@ -154,7 +154,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [56]:  ../lectures/19-free-monads.pdf
 [57]:  https://drive.google.com/file/d/1hOEQu8l-3Lv4vr1sTv3gvJBUpumQEu5Y/view?usp=sharing
 [58]:  https://drive.google.com/file/d/1HUy0_jwxDmo_iueRoB3gKzmNf82-ckxh/view?usp=sharing
-[56]:  ../lectures/20-streaming.pdf
+[59]:  ../lectures/20-streaming.pdf
 
 ### Assignments
 
