@@ -94,7 +94,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 21.08.2020 | [More Optics][50]                     | [video][51] | [chat][52] |                              |
 | 24.08.2020 | [More on Monads][53]                  | [video][54] | [chat][55] |                              |
 | 26.08.2020 | [Free Monads][56]                     | [video][57] | [chat][58] |                              |
-| 28.08.2020 | [Streaming][59]                       |             |            |                              |
+| 28.08.2020 | [Streaming][59]                       | [video][60] | [chat][61] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -155,6 +155,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [57]:  https://drive.google.com/file/d/1hOEQu8l-3Lv4vr1sTv3gvJBUpumQEu5Y/view?usp=sharing
 [58]:  https://drive.google.com/file/d/1HUy0_jwxDmo_iueRoB3gKzmNf82-ckxh/view?usp=sharing
 [59]:  ../lectures/20-streaming.pdf
+[60]:  https://drive.google.com/file/d/1TO0TVHJZWrwMvzGCRagE7STB3WsJniuD/view?usp=sharing
+[61]:  https://drive.google.com/file/d/1yVpAiy4jQ6F7ZfiDPPG5LDrZWHMui-Oq/view?usp=sharing
 
 ### Assignments
 
