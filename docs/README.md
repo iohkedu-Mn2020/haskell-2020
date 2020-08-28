@@ -94,6 +94,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 21.08.2020 | [More Optics][50]                     | [video][51] | [chat][52] |                              |
 | 24.08.2020 | [More on Monads][53]                  | [video][54] | [chat][55] |                              |
 | 26.08.2020 | [Free Monads][56]                     | [video][57] | [chat][58] |                              |
+| 28.08.2020 | [Streaming][59]                       |             |            |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -153,6 +154,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [56]:  ../lectures/19-free-monads.pdf
 [57]:  https://drive.google.com/file/d/1hOEQu8l-3Lv4vr1sTv3gvJBUpumQEu5Y/view?usp=sharing
 [58]:  https://drive.google.com/file/d/1HUy0_jwxDmo_iueRoB3gKzmNf82-ckxh/view?usp=sharing
+[56]:  ../lectures/20-streaming.pdf
 
 ### Assignments
 
@@ -165,6 +167,7 @@ If you have questions, check this video:
 - [w02](https://classroom.github.com/g/ZSww0ngM), due 14-August-2020, 12:30 MNG
 - [w03](https://classroom.github.com/g/Wc4HWmsI), due 21-August-2020, 12:30 MNG
 - [w04](https://classroom.github.com/g/3zLh1EOf), due 28-August-2020, 12:30 MNG
+- [w05](https://classroom.github.com/g/sO3WMGuz), due 4-September-2020, 12:30 MNG
 - [p1](https://classroom.github.com/g/pQ5wHPtj), due 21-August-2020, 12:30 MNG
 
 ### Tests
