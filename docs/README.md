@@ -72,30 +72,31 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 ## Class
 
-| Date       | Title                                 | Video       | Chat       | Assignment                   |
-| ---------- | ------------------------------------- | ----------- | ---------- | ---------------------------- |
-| 20.07.2020 | [Welcome][1]                          | [video][1]  | [chat][2]  |                              |
-|            | [Introduction to Cryptocurrencies][4] |             |            |                              |
-|            | [An Overview of Haskell][5]           |             |            | [Introduction][6]            |
-| 22.07.2020 | [Datatypes & Functions][7]            | [video][8]  | [chat][9]  | [Datatypes & Functions][10]  |
-| 24.07.2020 | [Polymorphism & Type Classes][11]     | [video][12] | [chat][13] |                              |
-| 27.07.2020 | [Higher-Order Functions][14]          | [video][15] | [chat][16] | [Higher-Order Functions][17] |
-|            | [Packaging & Tools][18]               |             |            |                              |
-| 29.07.2020 | [IO][19]                              | [video][20] | [chat][21] | [IO][22]                     |
-| 31.07.2020 | [Testing][23]                         | [video][24] | [chat][25] |                              |
-| 03.08.2020 | [Abstraction Patterns][26]            | [video][27] | [chat][28] |                              |
-| 05.08.2020 | [Concurrency][29]                     | [video][30] | [chat][31] |                              |
-| 07.08.2020 | [Network Servers][32]                 | [video][33] | [chat][34] |                              |
-| 10.08.2020 | [Parser Combinators][35]              | [video][36] | [chat][37] |                              |
-| 12.08.2020 | [More on Parsing][38]                 | [video][39] | [chat][40] |                              |
-| 14.08.2020 | [Data Structures][41]                 | [video][42] | [chat][43] |                              |
-| 17.08.2020 | [More on Data Structures][44]         | [video][45] | [chat][46] |                              |
-| 19.08.2020 | [Optics][47]                          | [video][48] | [chat][49] |                              |
-| 21.08.2020 | [More Optics][50]                     | [video][51] | [chat][52] |                              |
-| 24.08.2020 | [More on Monads][53]                  | [video][54] | [chat][55] |                              |
-| 26.08.2020 | [Free Monads][56]                     | [video][57] | [chat][58] |                              |
-| 28.08.2020 | [Streaming][59]                       | [video][60] | [chat][61] |                              |
-| 31.08.2020 | [(Embedded) Domain-Specific Languages[62] |         |            |                              |
+<<<<<<< HEAD
+| Date       | Title                                    | Video       | Chat       | Assignment                   |
+| ---------- | ---------------------------------------- | ----------- | ---------- | ---------------------------- |
+| 20.07.2020 | [Welcome][1]                             | [video][1]  | [chat][2]  |                              |
+|            | [Introduction to Cryptocurrencies][4]    |             |            |                              |
+|            | [An Overview of Haskell][5]              |             |            | [Introduction][6]            |
+| 22.07.2020 | [Datatypes & Functions][7]               | [video][8]  | [chat][9]  | [Datatypes & Functions][10]  |
+| 24.07.2020 | [Polymorphism & Type Classes][11]        | [video][12] | [chat][13] |                              |
+| 27.07.2020 | [Higher-Order Functions][14]             | [video][15] | [chat][16] | [Higher-Order Functions][17] |
+|            | [Packaging & Tools][18]                  |             |            |                              |
+| 29.07.2020 | [IO][19]                                 | [video][20] | [chat][21] | [IO][22]                     |
+| 31.07.2020 | [Testing][23]                            | [video][24] | [chat][25] |                              |
+| 03.08.2020 | [Abstraction Patterns][26]               | [video][27] | [chat][28] |                              |
+| 05.08.2020 | [Concurrency][29]                        | [video][30] | [chat][31] |                              |
+| 07.08.2020 | [Network Servers][32]                    | [video][33] | [chat][34] |                              |
+| 10.08.2020 | [Parser Combinators][35]                 | [video][36] | [chat][37] |                              |
+| 12.08.2020 | [More on Parsing][38]                    | [video][39] | [chat][40] |                              |
+| 14.08.2020 | [Data Structures][41]                    | [video][42] | [chat][43] |                              |
+| 17.08.2020 | [More on Data Structures][44]            | [video][45] | [chat][46] |                              |
+| 19.08.2020 | [Optics][47]                             | [video][48] | [chat][49] |                              |
+| 21.08.2020 | [More Optics][50]                        | [video][51] | [chat][52] |                              |
+| 24.08.2020 | [More on Monads][53]                     | [video][54] | [chat][55] |                              |
+| 26.08.2020 | [Free Monads][56]                        | [video][57] | [chat][58] |                              |
+| 28.08.2020 | [Streaming][59]                          | [video][60] | [chat][61] |                              |
+| 31.08.2020 | [Embedded Domain-Specific Languages][62] |             |            |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
