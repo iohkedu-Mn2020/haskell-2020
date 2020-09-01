@@ -1,0 +1,6 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:optics-examples"
+    - path: "./doctest/doctests.hs"
+      component: "test:optics-examples-doctests"

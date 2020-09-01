@@ -1,0 +1,8 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:little-robot"
+    - path: "./app/server.hs"
+      component: "exe:server"
+    - path: "./app/client.hs"
+      component: "exe:client"

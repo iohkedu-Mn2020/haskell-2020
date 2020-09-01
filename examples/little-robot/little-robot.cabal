@@ -1,0 +1,33 @@
+cabal-version:       >=1.10
+name:                little-robot
+version:             0.1.0.0
+author:              Lars Brünjes
+maintainer:          brunjlar@gmail.com
+build-type:          Simple
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Client
+                     , Remote
+                     , Robot
+  build-depends:       ansi-terminal
+                     , base == 4.14.0.0
+                     , network == 2.6.3.6
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+
+executable client
+  hs-source-dirs:      app
+  main-is:             client.hs
+  build-depends:       base == 4.14.0.0
+                     , little-robot
+  default-language:    Haskell2010
+  ghc-options:         -Wall -O2
+
+executable server
+  hs-source-dirs:      app
+  main-is:             server.hs
+  build-depends:       base == 4.14.0.0
+                     , little-robot
+  default-language:    Haskell2010
+  ghc-options:         -Wall -O2
