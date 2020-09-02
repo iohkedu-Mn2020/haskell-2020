@@ -1,0 +1,11 @@
+cabal-version:       >=1.10
+name:                dsls
+version:             0.1.0.0
+author:              Andres Loeh
+maintainer:          andres@well-typed.com
+build-type:          Simple
+
+library
+  exposed-modules:     DSLs, DSLs2, Prop, Combined, Marlowe
+  build-depends:       base >=4.14 && <4.15, containers, mtl, random, profunctors ==5.3
+  default-language:    Haskell2010
