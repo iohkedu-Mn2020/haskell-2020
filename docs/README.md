@@ -97,6 +97,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 26.08.2020 | [Free Monads][56]                        | [video][57] | [chat][58] |                              |
 | 28.08.2020 | [Streaming][59]                          | [video][60] | [chat][61] |                              |
 | 31.08.2020 | [Embedded Domain-Specific Languages][62] | [video][63] | [chat][64] |                              |
+| 02.09.2020 |                                          | [video][65] | [chat][66] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -162,6 +163,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [62]:  ../lectures/21-dsls.pdf
 [63]:  https://drive.google.com/file/d/1VeBZum65R3R0BWSMaG8VS8yUW3epge9u/view?usp=sharing
 [64]:  https://drive.google.com/file/d/17wJGLVhkVDR3FXP0Vc4TL07e_yjdQtLs/view?usp=sharing
+[65]:  https://drive.google.com/file/d/1sAGeMxvz8u73gZ0IEznRnfMF1pTiv82Y/view?usp=sharing
+[66]:  https://drive.google.com/file/d/1lpUHD1DNIXt9Y2FNl3OLKjRQ1JMbvSTF/view?usp=sharing
 
 ### Assignments
 
