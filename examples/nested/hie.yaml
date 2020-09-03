@@ -1,0 +1,6 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:nested"
+    - path: "./doctest/doctests.hs"
+      component: "test:nested-doctests"
