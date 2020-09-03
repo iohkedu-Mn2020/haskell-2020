@@ -202,6 +202,7 @@ that you will work alone, not in a team.
 | 25.08.2020 | [video][204] | [chat][205] |
 | 27.08.2020 | [video][206] | [chat][207] |
 | 01.09.2020 | [video][208] | [chat][209] |
+| 03.09.2020 | [video][210] | [chat][211] |
 
 [200]: https://drive.google.com/file/d/1_dVRHFZgZhQE27HhDVRLq_QdvJAP1yK0/view?usp=sharing
 [201]: https://drive.google.com/file/d/1Wx-vzhmE4XiaocV2FrV5VtloG8xniDP8/view?usp=sharing
@@ -213,6 +214,8 @@ that you will work alone, not in a team.
 [207]: https://drive.google.com/file/d/1NB6CmN6zVAlOI1XBtmUbxM3mc1GC83pT/view?usp=sharing
 [208]: https://drive.google.com/file/d/1ABo-iMUsXeMXS9fRzCyAlGkgoAvapSDK/view?usp=sharing
 [209]: https://drive.google.com/file/d/1YtJsnBTEYxWRwQ9LRLOkVg5VfbgM6Cl5/view?usp=sharing
+[210]: https://drive.google.com/file/d/14j7Z1QraMofS4IzX-X9a7a7J-KliHaRx/view?usp=sharing
+[211]: https://drive.google.com/file/d/1nJMgP3m8cP1pwCWgx1-C_jnPFYxJlsvh/view?usp=sharing
 
 ### Bibliography
 
