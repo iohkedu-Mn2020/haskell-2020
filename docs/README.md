@@ -72,7 +72,6 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 
 ## Class
 
-<<<<<<< HEAD
 | Date       | Title                                    | Video       | Chat       | Assignment                   |
 | ---------- | ---------------------------------------- | ----------- | ---------- | ---------------------------- |
 | 20.07.2020 | [Welcome][1]                             | [video][1]  | [chat][2]  |                              |
