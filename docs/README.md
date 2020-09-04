@@ -177,6 +177,7 @@ If you have questions, check this video:
 - [w03](https://classroom.github.com/g/Wc4HWmsI), due 21-August-2020, 12:30 MNG
 - [w04](https://classroom.github.com/g/3zLh1EOf), due 28-August-2020, 12:30 MNG
 - [w05](https://classroom.github.com/g/sO3WMGuz), due 4-September-2020, 12:30 MNG
+- [w06](https://classroom.github.com/g/JTzSeMXf), due 11-September-2020, 12:30 MNG
 - [p1](https://classroom.github.com/g/pQ5wHPtj), due 21-August-2020, 12:30 MNG
 
 ### Tests
