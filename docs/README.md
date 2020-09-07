@@ -98,6 +98,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 31.08.2020 | [Embedded Domain-Specific Languages][62] | [video][63] | [chat][64] |                              |
 | 02.09.2020 | Marlowe I                                | [video][65] | [chat][66] |                              |
 | 04.09.2020 | Marlowe II                               | [video][67] | [chat][68] |                              |
+| 07.09.2020 | Marlowe III                              | [video][69] | [chat][70] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -167,6 +168,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [66]:  https://drive.google.com/file/d/1lpUHD1DNIXt9Y2FNl3OLKjRQ1JMbvSTF/view?usp=sharing
 [67]:  https://drive.google.com/file/d/1DK2k23rlQ-Y_Lc-AGqu1tkvMELSX_R3T/view?usp=sharing
 [68]:  https://drive.google.com/file/d/1z4JDttyvrTPHC2M7LPUemcXItJAhPLOf/view?usp=sharing
+[69]:  https://drive.google.com/file/d/1wFjlLNJ14h6my8-1kw2sThmHMGJfN2Ef/view?usp=sharing
+[70]:  https://drive.google.com/file/d/17H6-LQElMJstZQp3wM998Zz1ckMoxdm4/view?usp=sharing
 
 ### Assignments
 
