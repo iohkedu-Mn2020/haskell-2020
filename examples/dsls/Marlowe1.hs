@@ -1,9 +1,18 @@
 {-# LANGUAGE NumericUnderscores #-}
 {-# OPTIONS_GHC -Wall #-}
-module Marlowe where
+module Marlowe1 where
 
 import Data.Map
 import Data.Ratio
+
+-- Next steps:
+--
+-- 1. Generate warnings as part of the reduction semantics. DONE
+-- 2. Add a function that reduces a contract as far as possible. DONE
+-- 3. Generalise from amounts to values (in Pay). DONE
+-- 4. Generalise from to-accountid to payee (in Pay). [to get money out] DONE
+-- 5. Change the semantics of Close to refund all account owners. DONE
+-- 6. Add a construct to the Contract language that waits for a deposit (plus semantics). DONE
 
 data Contract =
     Close

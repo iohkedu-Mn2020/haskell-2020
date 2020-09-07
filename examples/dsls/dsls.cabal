@@ -6,6 +6,6 @@ maintainer:          andres@well-typed.com
 build-type:          Simple
 
 library
-  exposed-modules:     DSLs, DSLs2, Prop, Combined, Marlowe
+  exposed-modules:     DSLs, DSLs2, Prop, Combined, Marlowe0, Marlowe1, Marlowe
   build-depends:       base >=4.14 && <4.15, containers, mtl, random, profunctors ==5.3
   default-language:    Haskell2010
