@@ -1,0 +1,15 @@
+cabal-version:       >=1.10
+name:                free-example
+version:             0.1.0.0
+author:              Lars Brünjes
+maintainer:          brunjlar@gmail.com
+build-type:          Simple
+
+library
+  exposed-modules:     FreeExample
+  build-depends:       base >=4.14 && <4.15
+                     , containers
+                     , free
+                     , stm
+  default-language:    Haskell2010
+  ghc-options:         -Wall
