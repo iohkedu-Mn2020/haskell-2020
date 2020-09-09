@@ -382,7 +382,7 @@ reduceContractStep environment state contract = go contract
         Reduced ReduceNoWarning ReduceNoPayment state cont
 
     go (When _cases timeout cont)
-      | ivTo (slotInterval environment) <= timeout   = NotReduced -- timeout still in "future"
+      | ivTo (slotInterval environment) < timeout    = NotReduced -- timeout still in "future"
       | timeout <= ivFrom (slotInterval environment) = Reduced ReduceNoWarning ReduceNoPayment state cont -- timeout occurred
       | otherwise                                    = AmbiguousSlotIntervalReductionError
 
