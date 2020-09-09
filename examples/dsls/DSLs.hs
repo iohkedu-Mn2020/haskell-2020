@@ -1,5 +1,5 @@
 {-# LANGUAGE BangPatterns #-}
-module Main where
+module DSLs where
 
 {-
 data Expr -- abstract

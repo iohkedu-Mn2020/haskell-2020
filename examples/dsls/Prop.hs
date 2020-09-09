@@ -6,7 +6,6 @@ import Control.Monad.State
 import Control.Monad.Reader
 import Data.Set (Set)
 import qualified Data.Set as Set
-import Data.Profunctor
 
 data Prop =
     Var String
@@ -29,8 +28,8 @@ cost (Or p1 p2)  = 1 + cost p1 + cost p2
 
 eval :: Prop -> Environment -> Bool
 eval (Var x)     env = env x
-eval T           env = True
-eval F           env = False
+eval T           _   = True
+eval F           _   = False
 eval (Not p)     env = not (eval p env)
 eval (And p1 p2) env = eval p1 env && eval p2 env
 eval (Or p1 p2)  env = eval p1 env || eval p2 env
