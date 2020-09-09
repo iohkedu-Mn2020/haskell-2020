@@ -198,6 +198,7 @@ that you will work alone, not in a team.
 | 29.07.2020 | 12:30 - 14:30 MNG | [t1](https://classroom.github.com/a/C4Juj31P) |
 | 12.08.2020 | 12:30 - 14:30 MNG | [t2](https://classroom.github.com/a/dHzLBhZ_) |
 | 26.08.2020 | 12:30 - 14:30 MNG | [t3](https://classroom.github.com/a/AqhOUQ2e) |
+| 09.09.2020 | 12:30 - 14:30 MNG | [t4](https://classroom.github.com/a/kNUSk7mP) |
 
 ### Examples and Q&A
 
