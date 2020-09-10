@@ -6,6 +6,7 @@ import Control.Monad.State
 import Control.Monad.Reader
 import Data.Set (Set)
 import qualified Data.Set as Set
+import Test.QuickCheck
 
 data Prop =
     Var String
@@ -15,6 +16,18 @@ data Prop =
   | And Prop Prop
   | Or Prop Prop
   deriving (Show, Eq)
+
+instance Arbitrary Prop where
+
+    arbitrary = oneof
+        [ Var <$> arbitrary
+        , pure T
+        , pure F
+        , Not <$> arbitrary
+        , And <$> arbitrary <*> arbitrary
+        , Or  <$> arbitrary <*> arbitrary
+        ]
+
 
 type Environment = String -> Bool
 
