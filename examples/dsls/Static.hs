@@ -21,12 +21,12 @@ import Marlowe
 --                         | static analysis
 
 clup :: Contract -> Integer
-clup Close         = 0
-clup (Pay _ _ _ c) = clup c
-clup (If _ t e)    = max (clup t) (clup e)
-clup (Let _ _ c)   = clup c
-clup (Assert _ c)  = clup c
-clup (When cs t c) = maximum $ (getSlot t) : clup c : map clup' cs
+clup Close           = 0
+clup (Pay _ _ _ _ c) = clup c
+clup (If _ t e)      = max (clup t) (clup e)
+clup (Let _ _ c)     = clup c
+clup (Assert _ c)    = clup c
+clup (When cs t c)   = maximum $ (getSlot t) : clup c : map clup' cs
   where
     clup' :: Case -> Integer
     clup' (Case _ c') = clup c'
