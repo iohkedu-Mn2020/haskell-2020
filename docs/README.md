@@ -101,6 +101,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 07.09.2020 | Marlowe III                              | [video][69] | [chat][70] |                              |
 | 09.09.2020 | Marlowe: Static Analysis & Simulator     | [video][71] | [chat][72] |                              |
 | 11.09.2020 | Marlowe: Commodities                     | [video][73] | [chat][74] |                              |
+| 14.09.2020 | Plutus I                                 | [video][75] | [chat][76] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -176,6 +177,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [72]:  https://drive.google.com/file/d/1AVtx_RV55Wn0mj_2k7jnS7mkCa6rNesI/view?usp=sharing
 [73]:  https://drive.google.com/file/d/1cdY_RfuKNCRxXDiZeQ59_qZX-P_J8UAi/view?usp=sharing
 [74]:  https://drive.google.com/file/d/1LvTGGZBX27ZXqxIIKGjgDS0DVhXUXAY8/view?usp=sharing
+[75]:  https://drive.google.com/file/d/1OVNlhRT1SiFGVyEjlLx1Uw-0TZmOqxsn/view?usp=sharing
+[76]:  https://drive.google.com/file/d/1btfOCt3g_bKqyYTnwdEOivke9ofp4Op9/view?usp=sharing
 
 ### Assignments
 
