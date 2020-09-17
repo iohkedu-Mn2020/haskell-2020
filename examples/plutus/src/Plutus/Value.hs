@@ -2,6 +2,7 @@ module Plutus.Value
     ( ScriptId, Token (..), Value
     , fromToken
     , valueMap
+    , tokenAmount
     ) where
 
 import           Data.List       (intercalate)
@@ -48,3 +49,6 @@ fromToken t n
 
 valueMap :: Value -> Map Token Natural
 valueMap (Value m) = m
+
+tokenAmount :: Token -> Value -> Natural
+tokenAmount t (Value m) = Map.findWithDefault 0 t m

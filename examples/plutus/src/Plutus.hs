@@ -4,7 +4,7 @@
 module Plutus
     ( Natural, MonadError (..)
     , module Plutus.Value
-    , ada, fromAda
+    , ada, fromAda, adaAmount
     , PubKey, SlotEnd (..), SlotRange (..), srStart, srEnd
     , Address (..)
     , Datum, fromDynamic, toDyn,  unit
@@ -135,6 +135,9 @@ ada = Token (-1) "ada" -- there can never be a script with index (-1), so ada ca
 
 fromAda :: Natural -> Value
 fromAda = fromToken ada
+
+adaAmount :: Value -> Natural
+adaAmount = tokenAmount ada
 
 genesisState :: [(PubKey, Natural)] -> ChainState
 genesisState xs = ChainState

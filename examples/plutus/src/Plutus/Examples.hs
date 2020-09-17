@@ -317,16 +317,261 @@ exampleForging = flip runChainM [("Charlie", 1000)] $ do
         }
 
 
--- write a contract that allows anybody to offer some value for sale in exchange for a stated
--- amount of ada.
+-- write a contract that allows anybody to offer some value for sale in exchange for some price.
+-- Also allow the seller to get the item on sale back at any time.
 
---  value: <1000 {0 Charlie's Token}>
---  datum: (100, PKAddress "Charlie")  --- Alice --->    to: Alice
+--
+--  value: <1000 {0 Charlie's Token}>  --- Alice --->    to: Alice
 --                                               |       value: <1000 0 {0 Charlie's Token}
 --                                               |
 --                                               |-->    to: Charlie
 --                                                       value: 100 ada
 
-sellValue :: Natural -> Script
-sellValue _price = Script $ \_sid _value _datum _index _tx -> fromEither $ undefined
+sell :: Value -> PubKey -> Script
+sell price seller = Script $ \_sid _value _datum _index tx -> fromEither $
+    unless (seller `elem` tx ^. txSignees) $ do
+        unless (any paysSeller $ tx ^. txOutputs) $ throwError "buyer doesn't pay seller"
 
+  where
+    paysSeller :: Output -> Bool
+    paysSeller o = o ^. oValue   == price &&
+                   o ^. oAddress == PKAddress seller
+
+exampleSale :: Either ChainError ((), ChainState)
+exampleSale = flip runChainM [("Alice", 1000), ("Bob", 1000), ("Charlie", 1000)] $ do
+    cid <- uploadScript $ charliesToken (0, 2)
+    let t = Token cid charliesTokenName
+    addTx Tx -- creation of the currency symbol/ monetary policy for Charlie's Token
+        { _txId        = 1
+        , _txInputs    = []
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress cid
+                            , _oValue   = mempty
+                            , _oDatum   = unit
+                            }]
+        , _txSlotRange = always
+        , _txForge     = mempty
+        }
+    addTx Tx -- forging of Charlie's Token
+        { _txId        = 2
+        , _txInputs    = [Input 1 0 unit, Input 0 2 unit]
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output
+                            { _oAddress = PKAddress "Charlie"
+                            , _oValue   = fromToken t 1000000
+                            , _oDatum   = unit
+                            }
+                         , Output (PKAddress "Charlie") (fromAda 1000) unit
+                         ]
+        , _txSlotRange = always
+        , _txForge     = fromToken t 1000000
+        }
+
+    sellId <- uploadScript $ sell (fromAda 100) "Charlie"
+    addTx Tx -- Charlie puts 1000 of his tokens on sale for 100 ada
+        { _txId        = 3
+        , _txInputs    = [Input 2 0 unit]
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress sellId
+                            , _oValue   = fromToken t 1000
+                            , _oDatum   = unit
+                            }
+                         , Output (PKAddress "Charlie") (fromToken t 999000) unit
+                         ]
+        , _txSlotRange = always
+        , _txForge     = mempty
+        }
+    addTx Tx -- Alice buys the 1000 tokens for 100 ada
+        { _txId        = 4
+        , _txInputs    = [Input 3 0 unit, Input 0 0 unit]
+        , _txSignees   = ["Alice"]
+        , _txOutputs   = [ Output (PKAddress "Alice")   (fromToken t 1000) unit
+                         , Output (PKAddress "Charlie") (fromAda 100)      unit
+                         , Output (PKAddress "Alice")   (fromAda 900)      unit
+                         ]
+        , _txSlotRange = always
+        , _txForge     = mempty
+        }
+{-
+    addTx Tx -- Charlies gets his tokens back (if nobody buys them)
+        { _txId        = 4
+        , _txInputs    = [Input 3 0 unit]
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output (PKAddress "Charlie") (fromToken t 1000) unit
+                         ]
+        , _txSlotRange = always
+        , _txForge     = mempty
+        }
+-}
+
+
+-- English Auction: An item is auctioned with some minimum bid. Bidders can raise the bid. After a deadline is reached,
+-- the seller either can reclaim the item (if there was no bid) or either seller or highest bidder can settle the auction
+-- by giving the item to the highest bidder and the highest bid to the seller.
+
+-- Datum/State will be Maybe (PubKey, Natural) for the highest bidder and his or her bid (there may be none).
+
+englishAuction :: PubKey -> Value -> Natural -> Slot -> Script
+englishAuction seller item minBid deadline = Script $ \sid _value datum _index tx -> fromEither $ do
+
+    mst <- case fromDynamic datum of
+                Nothing  -> throwError "wrong type of datum"
+                Just mst -> return mst
+
+    if tx ^. txSlotRange % srStart >= deadline
+        then case mst of
+                Nothing            -> unless (seller `elem` tx ^. txSignees) $
+                                    throwError "only seller can reclaim the item"
+                Just (bidder, bid) -> do
+                    unless (any (\o -> o ^. oValue   == item &&             -- item is the value of this output
+                                       o ^. oAddress == PKAddress bidder) $ -- the output goes to the bidder
+                            tx ^. txOutputs) $
+                        throwError "highest bidder must receive the item"
+                    unless (any (\o -> o ^. oValue   == fromAda bid &&      -- bid is the value of this output
+                                       o ^. oAddress == PKAddress seller) $ -- the output goes to the seller
+                            tx ^. txOutputs) $
+                        throwError "seller must receive the highest bid"
+
+        else do
+            bidder <- case tx ^. txSignees of
+                [b] -> return b
+                _   -> throwError "expected exactly one signature"
+            o <- case filter (\o' -> o' ^. oAddress == ScriptAddress sid)  (tx ^. txOutputs) of
+                [o'] -> return o'
+                _    -> throwError "expected exactly one output at the auction script address"
+
+            let newBid = adaAmount $ o ^. oValue
+            unless (o ^. oValue == item <> fromAda newBid) $
+                throwError "item must be contained in auction script output"
+
+            case mst of
+                Nothing                           ->
+                    unless (newBid >= minBid) $
+                        throwError "bid must be at least minimum bid"
+                Just (previousBidder, previousBid) -> do
+                    unless (newBid > previousBid) $
+                        throwError "bid must be higher than current bid"
+                    unless (any (\o' -> o' ^. oAddress == PKAddress previousBidder &&
+                                        o' ^. oValue   == fromAda previousBid) $
+                            tx ^. txOutputs) $
+                        throwError "previous bidder must have his bid returned"
+
+            mstNew <- case fromDynamic (o ^. oDatum) of
+                Nothing      -> throwError "wrong type of datum in the auction script output"
+                Just mstNew' -> return mstNew'
+
+            unless (mstNew == Just (bidder, newBid)) $
+                throwError "wrong state in auction script output"
+
+startAuction :: ChainM (ScriptId, ScriptId)
+startAuction = do
+    cid <- uploadScript $ charliesToken (0, 2)
+    let t = Token cid charliesTokenName
+    addTx Tx -- creation of the currency symbol/ monetary policy for Charlie's Token
+        { _txId        = 1
+        , _txInputs    = []
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress cid
+                            , _oValue   = mempty
+                            , _oDatum   = unit
+                            }]
+        , _txSlotRange = always
+        , _txForge     = mempty
+        }
+    addTx Tx -- forging of Charlie's Token
+        { _txId        = 2
+        , _txInputs    = [Input 1 0 unit, Input 0 2 unit]
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output
+                            { _oAddress = PKAddress "Charlie"
+                            , _oValue   = fromToken t 1000000
+                            , _oDatum   = unit
+                            }
+                         , Output (PKAddress "Charlie") (fromAda 1000) unit
+                         ]
+        , _txSlotRange = always
+        , _txForge     = fromToken t 1000000
+        }
+
+    auctionScriptId <- uploadScript $ englishAuction "Charlie" (fromToken t 1000) 50 10
+    addTx Tx -- puttin 1000 of Charlie's Token up for auction
+        { _txId        = 3
+        , _txInputs    = [Input 2 0 unit]
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress auctionScriptId
+                            , _oValue   = fromToken t 1000
+                            , _oDatum   = toDyn (Nothing :: Maybe (PubKey, Natural))
+                            }
+                         , Output (PKAddress "Charlie") (fromToken t 999000) unit
+                         ]
+        , _txSlotRange = SlotRange 0 (Finite 0)
+        , _txForge     = mempty
+        }
+    return (cid, auctionScriptId)
+
+runAuction :: (ScriptId -> ScriptId -> ChainM a) -> Either ChainError (a, ChainState)
+runAuction k = flip runChainM [("Alice", 1000), ("Bob", 1000), ("Charlie", 1000)] $ do
+    (tsid, asid) <- startAuction
+    k tsid asid
+
+nobodyBids :: ScriptId -> ScriptId -> ChainM ()
+nobodyBids tokenScriptId _auctionScriptId = do
+    let t = Token tokenScriptId charliesTokenName
+    tick 10
+    addTx Tx -- reclaiming the 1000 tokens
+        { _txId        = 4
+        , _txInputs    = [Input 3 0 unit]
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output (PKAddress "Charlie") (fromToken t 1000) unit
+                         ]
+        , _txSlotRange = SlotRange 10 Forever
+        , _txForge     = mempty
+        }
+
+aliceAndBobBid :: ScriptId -> ScriptId -> ChainM ()
+aliceAndBobBid tokenScriptId auctionScriptId = do
+    let t = Token tokenScriptId charliesTokenName
+    addTx Tx -- Alice bids 50
+        { _txId        = 4
+        , _txInputs    = [Input 3 0 unit, Input 0 0 unit]
+        , _txSignees   = ["Alice"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress auctionScriptId
+                            , _oValue   = fromToken t 1000 <> fromAda 50
+                            , _oDatum   = toDyn $ Just ("Alice", 50 :: Natural)
+                            }
+                         , Output (PKAddress "Alice") (fromAda 950) unit
+                         ]
+        , _txSlotRange = SlotRange 0 (Finite 0)
+        , _txForge     = mempty
+        }
+    addTx Tx -- Bob bids 60
+        { _txId        = 5
+        , _txInputs    = [Input 4 0 unit, Input 0 1 unit]
+        , _txSignees   = ["Bob"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress auctionScriptId
+                            , _oValue   = fromToken t 1000 <> fromAda 60
+                            , _oDatum   = toDyn $ Just ("Bob", 60 :: Natural)
+                            }
+                         , Output (PKAddress "Alice") (fromAda 50) unit
+                         , Output (PKAddress "Bob") (fromAda 940) unit
+                         ]
+        , _txSlotRange = SlotRange 0 (Finite 0)
+        , _txForge     = mempty
+        }
+    tick 10
+    addTx Tx -- somebody settles the auction
+        { _txId        = 6
+        , _txInputs    = [Input 5 0 unit]
+        , _txSignees   = []
+        , _txOutputs   = [ Output (PKAddress "Bob") (fromToken t 1000) unit
+                         , Output (PKAddress "Charlie") (fromAda 60) unit
+                         ]
+        , _txSlotRange = SlotRange 10 Forever
+        , _txForge     = mempty
+        }
