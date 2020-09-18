@@ -12,8 +12,8 @@ module Plutus
     , Input (..), iTxId, iIx, iRedeemer
     , Output (..), oAddress, oValue, oDatum
     , Tx (..), txId, txInputs, txOutputs, txSignees, txSlotRange, txForge
-    , ChainM, ChainError (..), ChainState, ValidationResult (..), fromEither
-    , runChainM, uploadScript, tick, addTx
+    , ChainM, ChainError (..), ChainState, ValidationResult (..), fromEither, toEither
+    , runChainM, uploadScript, tick, freshTxId, addTx
     , getRedeemer
     ) where
 
@@ -58,6 +58,10 @@ data ValidationResult =
 fromEither :: Either String () -> ValidationResult
 fromEither (Left err) = ValidationError err
 fromEither (Right ()) = Validated
+
+toEither :: ValidationResult -> Either String ()
+toEither (ValidationError err) = Left err
+toEither Validated             = Right ()
 
 type Datum = Dynamic
 
@@ -178,6 +182,11 @@ lookupScript sid = do
     if sid < length scripts
         then return $ scripts !! sid
         else throwError $ InvalidScriptId sid
+
+freshTxId :: ChainM TxId
+freshTxId = do
+    tids <- use csTids
+    return $ head [tid | tid <- [0 ..], not (IntSet.member tid tids)]
 
 addTx :: Tx -> ChainM ()
 addTx tx = do

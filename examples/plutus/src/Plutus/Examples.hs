@@ -3,10 +3,12 @@
 module Plutus.Examples where
 
 import           Control.Monad
-import qualified Data.Map               as Map
-import           Optics
+import qualified Data.Map        as Map
+import           Optics          hiding (elements)
+import           Test.QuickCheck
 
 import           Plutus
+import           Plutus.StateMachine
 
 genesis :: [(PubKey, Natural)]
 genesis = [("Alice", 100), ("Bob", 50)]
@@ -423,7 +425,7 @@ englishAuction seller item minBid deadline = Script $ \sid _value datum _index t
     if tx ^. txSlotRange % srStart >= deadline
         then case mst of
                 Nothing            -> unless (seller `elem` tx ^. txSignees) $
-                                    throwError "only seller can reclaim the item"
+                        throwError "only seller can reclaim the item"
                 Just (bidder, bid) -> do
                     unless (any (\o -> o ^. oValue   == item &&             -- item is the value of this output
                                        o ^. oAddress == PKAddress bidder) $ -- the output goes to the bidder
@@ -575,3 +577,146 @@ aliceAndBobBid tokenScriptId auctionScriptId = do
         , _txSlotRange = SlotRange 10 Forever
         , _txForge     = mempty
         }
+
+data ElevatorTransition = Up | Down -- elevator can change (transition) state by either going up or down
+    deriving Show
+
+elevator :: StateMachine Int ElevatorTransition
+elevator = StateMachine
+    { initialState = 1
+    , transit      = elevatorTransit
+    , isFinal      = const False
+    }
+  where
+    elevatorTransit :: Int -> ElevatorTransition -> Maybe Int
+    elevatorTransit flr Up
+        | flr < 10   = Just $ flr + 1
+        | otherwise  = Nothing
+    elevatorTransit flr Down
+        | flr > 1    = Just $ flr - 1
+        | otherwise  = Nothing
+
+exampleElevator :: Either ChainError ((), ChainState)
+exampleElevator = flip runChainM [] $ do
+    (sid, tid, token) <- deployStateMachine elevator trivialCont "Alice" -- initialize elevator at floor 1
+
+    addTx Tx                                  -- move elevator up
+        { _txId        = tid + 1
+        , _txInputs    = [Input tid 0 $ toDyn Up]
+        , _txSignees   = []
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress sid
+                            , _oValue   = fromToken token 1
+                            , _oDatum   = toDyn (2 :: Int)
+                            }
+                         ]
+        , _txSlotRange = SlotRange 0 Forever
+        , _txForge     = mempty
+        }
+
+instance Arbitrary ElevatorTransition where
+    arbitrary = elements [Up, Down]
+    shrink _  = []
+
+applyTransitions :: Int -> [ElevatorTransition] -> Int
+applyTransitions flr []       = flr
+applyTransitions flr (t : ts) = case transit elevator flr t of
+    Nothing   -> applyTransitions flr  ts
+    Just flr' -> applyTransitions flr' ts
+
+prop_ElevatorDoesNotFallThroughTheBottom :: [ElevatorTransition] -> Property
+prop_ElevatorDoesNotFallThroughTheBottom ts =
+    let flr' = applyTransitions 1 ts
+    in  counterexample (show flr') $ flr' >= 1
+
+prop_ElevatorDoesNotGoThroughTheRoof :: [ElevatorTransition] -> Property
+prop_ElevatorDoesNotGoThroughTheRoof ts =
+    let flr' = applyTransitions 1 ts
+    in  counterexample (show flr') $ flr' <= 10
+
+
+
+
+-- voting via state machines
+
+-- We have a list of voters, two candidates, a deadline and some amount of ada. Voters can vote for
+-- one of the two candidates. Onces the deadline is reached, the winner gets the ada. In case of a draw,
+-- the money is split "evenly".
+
+data VotingState =
+      NotFunded
+    | VotingPhase [PubKey] Int Int
+    | Ended
+    deriving Show
+
+data VotingTransition =
+      ProvideFunding
+    | VoteForFirstCandidate PubKey
+    | VoteForSecondCandidate PubKey
+    | PayWinner
+    deriving Show
+
+isFinalVotingState :: VotingState -> Bool
+isFinalVotingState Ended = True
+isFinalVotingState _     = False
+
+transitVoting :: [PubKey] -> VotingState -> VotingTransition -> Maybe VotingState
+transitVoting voters NotFunded             ProvideFunding             = Just $ VotingPhase voters 0 0
+transitVoting _      (VotingPhase pks m n) (VoteForFirstCandidate pk)
+    | pk `elem` pks                                                   =
+        Just $ VotingPhase (filter (/= pk) pks) (m + 1) n
+transitVoting _      (VotingPhase pks m n) (VoteForSecondCandidate pk)
+    | pk `elem` pks                                                   =
+        Just $ VotingPhase (filter (/= pk) pks) m (n + 1)
+transitVoting _      (VotingPhase _ _ _)   PayWinner                  = Just Ended
+transitVoting _      _                     _                          = Nothing
+
+voting :: [PubKey] -> StateMachine VotingState VotingTransition
+voting voters = StateMachine
+    { initialState = NotFunded
+    , transit      = transitVoting voters
+    , isFinal      = isFinalVotingState
+    }
+
+votingCont :: PubKey                      -- ^ first candidate
+           -> PubKey                      -- ^ second candidate
+           -> Natural                     -- ^ required funding in ada
+           -> Slot                        -- ^ deadline
+           -> VotingState
+           -> VotingTransition
+           -> Maybe (VotingState, Output)
+           -> Script
+votingCont _ _ amount _ _ ProvideFunding (Just (_, o)) = Script $ \_sid _value _datum _index _tx -> fromEither $
+    unless (tokenAmount ada (o ^. oValue) == amount) $
+        throwError "funding not provided"
+votingCont _ _ amount _ _ (VoteForFirstCandidate pk) (Just (_, o)) = Script $ \_sid _value _datum _index tx -> fromEither $ do
+    unless (pk `elem` tx ^. txSignees) $
+        throwError "voter must sign transaction"
+    unless (tokenAmount ada (o ^. oValue) == amount) $
+        throwError "funding not provided"
+votingCont _ _ amount _ _ (VoteForSecondCandidate pk) (Just (_, o)) = Script $ \_sid _value _datum _index tx -> fromEither $ do
+    unless (pk `elem` tx ^. txSignees) $
+        throwError "voter must sign transaction"
+    unless (tokenAmount ada (o ^. oValue) == amount) $
+        throwError "funding not provided"
+votingCont cm cn amount deadline (VotingPhase _ m n) PayWinner Nothing = Script $ \_sid _value _datum _index tx -> fromEither $ do
+    unless (tx ^. txSlotRange % srStart >= deadline) $
+        throwError "deadline has not been reached"
+    if m > n
+        then
+            unless (cm `elem` tx ^. txSignees) $
+                throwError "first candidate must sign the transaction"
+        else if n > m
+            then
+                unless (cn `elem` tx ^. txSignees) $
+                    throwError "second candidate must sign the transaction"
+            else do
+                let am = amount `div` 2
+                    an = amount - am
+                unless (any (\o -> o ^. oAddress == PKAddress cm &&
+                                   tokenAmount ada (o ^. oValue) == am) $ tx ^. txOutputs) $
+                    throwError "first candidate must be paid"
+                unless (any (\o -> o ^. oAddress == PKAddress cn &&
+                                   tokenAmount ada (o ^. oValue) == an) $ tx ^. txOutputs) $
+                    throwError "second candidate must be paid"
+votingCont _ _ _ _ _ _ _ = Script $ \_ _ _ _ _ -> ValidationError "unexpected situation"

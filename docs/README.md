@@ -103,6 +103,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 11.09.2020 | Marlowe: Commodities                     | [video][73] | [chat][74] |                              |
 | 14.09.2020 | Plutus I                                 | [video][75] | [chat][76] |                              |
 | 16.09.2020 | Plutus II                                | [video][77] | [chat][78] |                              |
+| 18.09.2020 | Plutus: State Machines                   | [video][79] | [chat][80] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -182,6 +183,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [76]:  https://drive.google.com/file/d/1btfOCt3g_bKqyYTnwdEOivke9ofp4Op9/view?usp=sharing
 [77]:  https://drive.google.com/file/d/1PoT0FGsX_9E0zesdaMNcUzlV64B-91Tf/view?usp=sharing
 [78]:  https://drive.google.com/file/d/1gm2gtp4_95tP0zn59Gt48Zk2xaqcc03s/view?usp=sharing
+[79]:  https://drive.google.com/file/d/1QvGbbaGSUzr5jbtcRNjXabpipE-z6uib/view?usp=sharing
+[80]:  https://drive.google.com/file/d/13vIEnie4Cjbc41TX4t6KNt4h5dVHBQi4/view?usp=sharing
 
 ### Assignments
 
