@@ -186,7 +186,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [78]:  https://drive.google.com/file/d/1gm2gtp4_95tP0zn59Gt48Zk2xaqcc03s/view?usp=sharing
 [79]:  https://drive.google.com/file/d/1QvGbbaGSUzr5jbtcRNjXabpipE-z6uib/view?usp=sharing
 [80]:  https://drive.google.com/file/d/13vIEnie4Cjbc41TX4t6KNt4h5dVHBQi4/view?usp=sharing
-[81]:  ../lectures/template-haskell.pdf
+[81]:  ../lectures/22-template-haskell.pdf
 [82]:  https://drive.google.com/file/d/1kmeVAqn0tugQ53DFW_ylro7pDoCQhsED/view?usp=sharing
 [83]:  https://drive.google.com/file/d/1lvR2rupIgA-KeddDWIIuOyBdJLYO1onk/view?usp=sharing
 
