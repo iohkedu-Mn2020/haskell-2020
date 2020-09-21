@@ -104,6 +104,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 14.09.2020 | Plutus I                                 | [video][75] | [chat][76] |                              |
 | 16.09.2020 | Plutus II                                | [video][77] | [chat][78] |                              |
 | 18.09.2020 | Plutus: State Machines                   | [video][79] | [chat][80] |                              |
+| 21.09.2020 | [Template Haskell][81]                   | [video][82] | [chat][83] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -185,6 +186,9 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [78]:  https://drive.google.com/file/d/1gm2gtp4_95tP0zn59Gt48Zk2xaqcc03s/view?usp=sharing
 [79]:  https://drive.google.com/file/d/1QvGbbaGSUzr5jbtcRNjXabpipE-z6uib/view?usp=sharing
 [80]:  https://drive.google.com/file/d/13vIEnie4Cjbc41TX4t6KNt4h5dVHBQi4/view?usp=sharing
+[81]:  ../lectures/template-haskell.pdf
+[82]:  https://drive.google.com/file/d/1kmeVAqn0tugQ53DFW_ylro7pDoCQhsED/view?usp=sharing
+[83]:  https://drive.google.com/file/d/1lvR2rupIgA-KeddDWIIuOyBdJLYO1onk/view?usp=sharing
 
 ### Assignments
 
