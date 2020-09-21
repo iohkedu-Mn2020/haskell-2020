@@ -1,0 +1,11 @@
+cabal-version: 2.0
+name: power-performance-test
+version: 0.1
+build-type: Simple
+
+executable power-performance-test
+  hs-source-dirs: .
+  default-language: Haskell2010
+  main-is: Power.hs
+  other-modules: SPower
+  build-depends: base, gauge, criterion, template-haskell
