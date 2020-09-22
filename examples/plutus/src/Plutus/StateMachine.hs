@@ -96,7 +96,7 @@ stateMachineScript :: forall s t. (Eq s, Typeable s, Typeable t)
                    -> Token
                    -> (s -> t -> Maybe (s, Output) -> Script)
                    -> Script
-stateMachineScript sm token cont = Script $ \sid value datum index tx -> fromEither $ do
+stateMachineScript sm token cont = Script $ \sid value datum index outputs tx -> fromEither $ do
 
     unless (tokenAmount token value == 1) $
         throwError "unique token is not present in the old output"
@@ -115,7 +115,7 @@ stateMachineScript sm token cont = Script $ \sid value datum index tx -> fromEit
         then do
             unless (null $ relevantOutputs sid tx) $
                 throwError "no output at the script address expected in final state"
-            toEither $ runScript (cont state transition Nothing) sid value datum index tx
+            toEither $ runScript (cont state transition Nothing) sid value datum index outputs tx
         else do
             output        <- case relevantOutputs sid tx of
                                 [o] -> return o
@@ -129,20 +129,20 @@ stateMachineScript sm token cont = Script $ \sid value datum index tx -> fromEit
             unless (actualState == expectedState) $
                 throwError "actual state of the output does not agree with the expected state"
 
-            toEither $ runScript (cont state transition (Just (expectedState, output))) sid value datum index tx
+            toEither $ runScript (cont state transition (Just (expectedState, output))) sid value datum index outputs tx
 
   where
     relevantOutputs :: ScriptId -> Tx -> [Output]
     relevantOutputs sid tx = [o | o <- tx ^. txOutputs, o ^. oAddress == ScriptAddress sid]
 
 trivialCont :: s -> t -> Maybe (s, Output) -> Script
-trivialCont _s _t _mso = Script $ \_sid _value _datum _index _tx -> Validated
+trivialCont _s _t _mso = Script $ \_sid _value _datum _index _outputs _tx -> Validated
 
 -- | monetary policy of our unique token
 uniqueTokenScript :: String      -- ^ token name
                   -> (TxId, Int) -- ^ "pointer" to an output that must be consumed during forging
                   -> Script
-uniqueTokenScript tn (tid, i) = Script $ \sid _value _datum _index tx -> fromEither $ do
+uniqueTokenScript tn (tid, i) = Script $ \sid _value _datum _index _outputs tx -> fromEither $ do
     let token = Token sid tn
     unless (tokenAmount token (tx ^. txForge) == 1) $
         throwError "unique token must be forged with amount one"

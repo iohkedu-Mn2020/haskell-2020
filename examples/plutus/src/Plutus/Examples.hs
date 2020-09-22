@@ -39,7 +39,7 @@ tx2 = Tx
     }
 
 aliceOrBob :: Script
-aliceOrBob = Script $ \_addr _value _datum _index tx ->
+aliceOrBob = Script $ \_addr _value _datum _index _outputs tx ->
   let
     xs = tx ^. txSignees
   in
@@ -48,7 +48,7 @@ aliceOrBob = Script $ \_addr _value _datum _index tx ->
         else ValidationError "Alice or Bob must sign the transaction!"
 
 timeLock :: PubKey -> Slot -> Script
-timeLock pk sl = Script $ \_addr _value _datum _index tx ->
+timeLock pk sl = Script $ \_addr _value _datum _index _outputs tx ->
     case (sl <= tx ^. txSlotRange % srStart,  pk `elem` tx ^. txSignees) of
         (True,  True)  -> Validated
         (False, True)  -> ValidationError "too early"
@@ -56,7 +56,7 @@ timeLock pk sl = Script $ \_addr _value _datum _index tx ->
         (False, False) -> ValidationError "too early & recipient has not signed"
 
 guessTheNumber :: Int -> Script
-guessTheNumber n = Script $ \_addr _value _datum index tx ->
+guessTheNumber n = Script $ \_addr _value _datum index _outputs tx ->
     case fromDynamic $ getRedeemer index tx of
         Nothing         -> ValidationError "wrong redeemer type"
         Just m
@@ -208,8 +208,8 @@ exampleVoting = flip runChainM [("Charlie", 1000)] $ do
 vote :: Slot -> Script
 vote deadline = Script validate
   where
-    validate :: ScriptId -> Value -> Datum -> Int -> Tx -> ValidationResult
-    validate sid value datum index tx = fromEither $ do
+    validate :: ScriptId -> Value -> Datum -> Int -> [Output] -> Tx -> ValidationResult
+    validate sid value datum index _outputs tx = fromEither $ do
 
         vs <- case fromDynamic datum of
             Nothing -> throwError "expected VoteState"
@@ -264,7 +264,7 @@ vote deadline = Script validate
 -- afterwards, no other forging transaction can ever exist.
 
 charliesToken :: (TxId, Int) -> Script
-charliesToken ptr = Script $ \sid _value _datum _index tx -> fromEither $ do
+charliesToken ptr = Script $ \sid _value _datum _index _outputs tx -> fromEither $ do
 
     unless ("Charlie" `elem` tx ^. txSignees) $
         throwError "only Charlie can forge this token"
@@ -330,7 +330,7 @@ exampleForging = flip runChainM [("Charlie", 1000)] $ do
 --                                                       value: 100 ada
 
 sell :: Value -> PubKey -> Script
-sell price seller = Script $ \_sid _value _datum _index tx -> fromEither $
+sell price seller = Script $ \_sid _value _datum _index _outputs tx -> fromEither $
     unless (seller `elem` tx ^. txSignees) $ do
         unless (any paysSeller $ tx ^. txOutputs) $ throwError "buyer doesn't pay seller"
 
@@ -416,7 +416,7 @@ exampleSale = flip runChainM [("Alice", 1000), ("Bob", 1000), ("Charlie", 1000)]
 -- Datum/State will be Maybe (PubKey, Natural) for the highest bidder and his or her bid (there may be none).
 
 englishAuction :: PubKey -> Value -> Natural -> Slot -> Script
-englishAuction seller item minBid deadline = Script $ \sid _value datum _index tx -> fromEither $ do
+englishAuction seller item minBid deadline = Script $ \sid _value datum _index _outputs tx -> fromEither $ do
 
     mst <- case fromDynamic datum of
                 Nothing  -> throwError "wrong type of datum"
@@ -686,20 +686,20 @@ votingCont :: PubKey                      -- ^ first candidate
            -> VotingTransition
            -> Maybe (VotingState, Output)
            -> Script
-votingCont _ _ amount _ _ ProvideFunding (Just (_, o)) = Script $ \_sid _value _datum _index _tx -> fromEither $
+votingCont _ _ amount _ _ ProvideFunding (Just (_, o)) = Script $ \_sid _value _datum _index _outputs _tx -> fromEither $
     unless (tokenAmount ada (o ^. oValue) == amount) $
         throwError "funding not provided"
-votingCont _ _ amount _ _ (VoteForFirstCandidate pk) (Just (_, o)) = Script $ \_sid _value _datum _index tx -> fromEither $ do
+votingCont _ _ amount _ _ (VoteForFirstCandidate pk) (Just (_, o)) = Script $ \_sid _value _datum _index _outputs tx -> fromEither $ do
     unless (pk `elem` tx ^. txSignees) $
         throwError "voter must sign transaction"
     unless (tokenAmount ada (o ^. oValue) == amount) $
         throwError "funding not provided"
-votingCont _ _ amount _ _ (VoteForSecondCandidate pk) (Just (_, o)) = Script $ \_sid _value _datum _index tx -> fromEither $ do
+votingCont _ _ amount _ _ (VoteForSecondCandidate pk) (Just (_, o)) = Script $ \_sid _value _datum _index _outputs tx -> fromEither $ do
     unless (pk `elem` tx ^. txSignees) $
         throwError "voter must sign transaction"
     unless (tokenAmount ada (o ^. oValue) == amount) $
         throwError "funding not provided"
-votingCont cm cn amount deadline (VotingPhase _ m n) PayWinner Nothing = Script $ \_sid _value _datum _index tx -> fromEither $ do
+votingCont cm cn amount deadline (VotingPhase _ m n) PayWinner Nothing = Script $ \_sid _value _datum _index _outputs tx -> fromEither $ do
     unless (tx ^. txSlotRange % srStart >= deadline) $
         throwError "deadline has not been reached"
     if m > n
@@ -719,4 +719,220 @@ votingCont cm cn amount deadline (VotingPhase _ m n) PayWinner Nothing = Script 
                 unless (any (\o -> o ^. oAddress == PKAddress cn &&
                                    tokenAmount ada (o ^. oValue) == an) $ tx ^. txOutputs) $
                     throwError "second candidate must be paid"
-votingCont _ _ _ _ _ _ _ = Script $ \_ _ _ _ _ -> ValidationError "unexpected situation"
+votingCont _ _ _ _ _ _ _ = Script $ \_ _ _ _ _ _ -> ValidationError "unexpected situation"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--  contract address: A       /-> Tx2' ---> O3'
+--                           /
+--                          /
+--  ---> O1 ---> Tx1 ---> O2 ---> Tx2  ---> O3
+--       A                A                 A
+--       s1               s2                s3
+
+-- PROBLEM: In order to transition from a state s(i) to a state s(i+1),
+-- you have to create a transaction that consumes O(i) and produces an new
+-- output O(i+1). This transaction will FAIL if somebody else has updated the state
+-- in the time it took you to create and submit that transaction.
+-- So if there is a Tx2' that consumes O2, Tx2 will be invalid.
+
+
+
+
+
+
+
+
+-- crowd sourcing campaign
+--
+-- Same as in the Marlowe assignment, except no fixed list of contributors and no fixed individual
+-- contribution.
+--
+-- Idea: Create a smart contract for the campaign. Contributors contribute by sending money
+-- to the address of that smart contract. There are two ways to unlock the money:
+--  - the campaign owner can unlock it if the campaign goal has been reached.
+--  - contirbutors can unlock it if not.
+--
+-- Introduce two deadline: After the first, the owner can consume the outputs in one transaction if the sum of the input
+-- values is at least as large as the campaign goal. After the second deadline, every contributor can get his or her owen
+-- contribution back.
+--
+--                      | first deadline            | second deadline
+--
+--      O1 -----------
+--     500            \
+--     Alice           |
+--                      \
+--         O2 -----------> TX ->  O
+--        400     /      Owner  1900
+--        Bob    /
+--              /
+--      O3 -----
+--    1000
+--    Charlie
+--
+--
+--      O1 ----------------------------------------> TX -> O3
+--     500                                                500
+--
+--         O2 -------------------------------------> TX ->  O4
+--        400                                              400
+--
+-- use the contributor as datum for the output
+
+crowdSourcingCampaign :: PubKey -> Natural -> Slot -> Slot -> Script
+crowdSourcingCampaign owner goal deadline1 deadline2 = Script $ \sid _value datum _index outputs tx -> fromEither $
+    if owner `elem` tx ^. txSignees
+        then do
+            unless (tx ^. txSlotRange % srStart >= deadline1) $ -- check that deadline 1 has passed
+                throwError "too early for collection"
+
+            let sumOfAda = sum [adaAmount $ o ^. oValue | o <- outputs, (o ^. oAddress) == ScriptAddress sid]
+            unless (sumOfAda >= goal) $
+                throwError "campaign goal has not been reached"
+
+        else do
+            unless (tx ^. txSlotRange % srStart >= deadline2) $ -- check that deadline 2 has passed
+                throwError "too early for refunds"
+            contributor <- case fromDynamic datum of
+                Nothing -> throwError "datum has the wrong type"-- check that datum contains a public key
+                Just pk -> return pk
+            unless (contributor `elem` tx ^. txSignees) $       -- check that public key from the datum has signed the tx
+                throwError "contributor must sign refund transaction"
+
+successfulCampaignExample :: Either ChainError ((), ChainState)
+successfulCampaignExample = flip runChainM [("Alice", 1000), ("Bob", 1000), ("Charlie", 1000)] $ do
+    sid <- uploadScript $ crowdSourcingCampaign "Andres" 1800 10 20
+    addTx Tx -- Alice contributes 500
+        { _txId        = 1
+        , _txInputs    = [Input 0 0 unit]
+        , _txSignees   = ["Alice"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress sid
+                            , _oValue   = fromAda 500
+                            , _oDatum   = toDyn "Alice"
+                            }
+                         , Output (PKAddress "Alice") (fromAda 500) unit
+                         ]
+        , _txSlotRange = SlotRange 0 (Finite 0)
+        , _txForge     = mempty
+        }
+    addTx Tx -- Bob contributes 400
+        { _txId        = 2
+        , _txInputs    = [Input 0 1 unit]
+        , _txSignees   = ["Bob"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress sid
+                            , _oValue   = fromAda 400
+                            , _oDatum   = toDyn "Bob"
+                            }
+                         , Output (PKAddress "Bob") (fromAda 600) unit
+                         ]
+        , _txSlotRange = SlotRange 0 (Finite 0)
+        , _txForge     = mempty
+        }
+    addTx Tx -- Charlies contributes 1000
+        { _txId        = 3
+        , _txInputs    = [Input 0 2 unit]
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress sid
+                            , _oValue   = fromAda 1000
+                            , _oDatum   = toDyn "Charlie"
+                            }
+                         ]
+        , _txSlotRange = SlotRange 0 (Finite 0)
+        , _txForge     = mempty
+        }
+    tick 10
+    addTx Tx -- Andres collects
+        { _txId        = 4
+        , _txInputs    = [Input 1 0 unit, Input 2 0 unit, Input 3 0 unit]
+        , _txSignees   = ["Andres"]
+        , _txOutputs   = [ Output (PKAddress "Andres") (fromAda 1900) unit ]
+        , _txSlotRange = SlotRange 10 (Finite 10)
+        , _txForge     = mempty
+        }
+
+failingCampaignExample :: Either ChainError ((), ChainState)
+failingCampaignExample = flip runChainM [("Alice", 1000), ("Bob", 1000), ("Charlie", 1000)] $ do
+    sid <- uploadScript $ crowdSourcingCampaign "Andres" 1800 10 20
+    addTx Tx -- Alice contributes 500
+        { _txId        = 1
+        , _txInputs    = [Input 0 0 unit]
+        , _txSignees   = ["Alice"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress sid
+                            , _oValue   = fromAda 300
+                            , _oDatum   = toDyn "Alice"
+                            }
+                         , Output (PKAddress "Alice") (fromAda 700) unit
+                         ]
+        , _txSlotRange = SlotRange 0 (Finite 0)
+        , _txForge     = mempty
+        }
+    addTx Tx -- Bob contributes 400
+        { _txId        = 2
+        , _txInputs    = [Input 0 1 unit]
+        , _txSignees   = ["Bob"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress sid
+                            , _oValue   = fromAda 400
+                            , _oDatum   = toDyn "Bob"
+                            }
+                         , Output (PKAddress "Bob") (fromAda 600) unit
+                         ]
+        , _txSlotRange = SlotRange 0 (Finite 0)
+        , _txForge     = mempty
+        }
+    addTx Tx -- Charlies contributes 1000
+        { _txId        = 3
+        , _txInputs    = [Input 0 2 unit]
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output
+                            { _oAddress = ScriptAddress sid
+                            , _oValue   = fromAda 1000
+                            , _oDatum   = toDyn "Charlie"
+                            }
+                         ]
+        , _txSlotRange = SlotRange 0 (Finite 0)
+        , _txForge     = mempty
+        }
+    tick 20
+    addTx Tx -- Alice gets refund
+        { _txId        = 4
+        , _txInputs    = [Input 1 0 unit]
+        , _txSignees   = ["Alice"]
+        , _txOutputs   = [ Output (PKAddress "Alice") (fromAda 300) unit ]
+        , _txSlotRange = SlotRange 20 (Finite 20)
+        , _txForge     = mempty
+        }
+    addTx Tx -- Bob gets refund
+        { _txId        = 5
+        , _txInputs    = [Input 2 0 unit]
+        , _txSignees   = ["Bob"]
+        , _txOutputs   = [ Output (PKAddress "Bob") (fromAda 400) unit ]
+        , _txSlotRange = SlotRange 20 (Finite 20)
+        , _txForge     = mempty
+        }
+    addTx Tx -- Charlie gets refund
+        { _txId        = 6
+        , _txInputs    = [Input 3 0 unit]
+        , _txSignees   = ["Charlie"]
+        , _txOutputs   = [ Output (PKAddress "Charlie") (fromAda 1000) unit ]
+        , _txSlotRange = SlotRange 20 (Finite 20)
+        , _txForge     = mempty
+        }

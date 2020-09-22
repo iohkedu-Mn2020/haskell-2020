@@ -234,6 +234,7 @@ that you will work alone, not in a team.
 | 10.09.2020 | [video][214] | [chat][215] |
 | 15.09.2020 | [video][216] | [chat][217] |
 | 17.09.2020 | [video][218] | [chat][219] |
+| 22.09.2020 | [video][220] | [chat][221] |
 
 [200]: https://drive.google.com/file/d/1_dVRHFZgZhQE27HhDVRLq_QdvJAP1yK0/view?usp=sharing
 [201]: https://drive.google.com/file/d/1Wx-vzhmE4XiaocV2FrV5VtloG8xniDP8/view?usp=sharing
@@ -255,6 +256,8 @@ that you will work alone, not in a team.
 [217]: https://drive.google.com/file/d/12OiMSmoA6yItBWZZj-M2V4CE1ZD7eRyq/view?usp=sharing
 [218]: https://drive.google.com/file/d/18Szu5rqzGkD87xLXE21ZOrcwKhaQj0Jv/view?usp=sharing
 [219]: https://drive.google.com/file/d/1TtCgsQC19QaIpItaeLTGuY1f4iih_cAt/view?usp=sharing
+[220]: https://drive.google.com/file/d/1PeN0Q-GygHITA-sh5RdrlLBkmITny6N1/view?usp=sharing
+[221]: https://drive.google.com/file/d/1Atov2UfZeXk2uWO1f1vQjxWPh4gThPe2/view?usp=sharing
 
 ### Bibliography
 

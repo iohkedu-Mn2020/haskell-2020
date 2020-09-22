@@ -76,7 +76,7 @@ type Datum = Dynamic
 --      | DUnit
 --      | DMap String Datum-
 
-newtype Script = Script {runScript :: ScriptId -> Value -> Datum -> Int -> Tx -> ValidationResult}
+newtype Script = Script {runScript :: ScriptId -> Value -> Datum -> Int -> [Output] -> Tx -> ValidationResult}
 
 instance Show Script where
     show = const "Script"
@@ -202,9 +202,11 @@ addTx tx = do
     unless (currentSlot `inRange` sr) $
         throwError $ SlotError currentSlot sr
 
-    xs <-  mapM (\(i, input)  -> validateInput tx  i input)  (zip [0..] $ tx ^. txInputs)
+    outputs <-  mapM validateInput1 $ tx ^. txInputs
 
-    let inVal = mconcat $ fst <$> xs
+    mapM_ (\(i, output)  -> validateInput2 tx i output outputs) (zip [0..] outputs)
+
+    let inVal = mconcat $ (^. oValue) <$> outputs
     outVal <- mconcat <$> mapM (\(i, output) -> processOutput tid i output) (zip [0..] $ tx ^. txOutputs)
     let forge = tx ^. txForge
     when (inVal <> forge /= outVal) $
@@ -212,11 +214,11 @@ addTx tx = do
 
     let forgedCurrencySymbols = [cid | (Token cid _, _) <- Map.toList $ valueMap forge]
     forM_ forgedCurrencySymbols $ \cid ->
-        unless (any (== ScriptAddress cid) $ snd <$> xs) $
+        unless (any (== ScriptAddress cid) $ (^. oAddress) <$> outputs) $
             throwError $ IllegalForging cid
 
-validateInput :: Tx -> Int -> Input -> ChainM (Value, Address)
-validateInput tx i input = do
+validateInput1 :: Input -> ChainM Output
+validateInput1 input = do
 
     let key = (input ^. iTxId, input ^. iIx)
     m <- use $ csUTxOs % at key
@@ -224,6 +226,11 @@ validateInput tx i input = do
         Nothing -> throwError $ NonExistingOutput key
         Just o  -> return o
     csUTxOs % at key .= Nothing
+
+    return output
+
+validateInput2 :: Tx -> Int -> Output -> [Output] -> ChainM ()
+validateInput2 tx i output outputs = do
 
     let v = output ^. oValue
         a = output ^. oAddress
@@ -234,11 +241,9 @@ validateInput tx i input = do
                 throwError $ MissingSignature pk
         ScriptAddress sid -> do
             script <- lookupScript sid
-            case runScript script sid v (output ^. oDatum) i tx of
+            case runScript script sid v (output ^. oDatum) i outputs tx of
                 Validated           -> return ()
                 ValidationError err -> throwError $ ValidationError' err
-
-    return (v, a)
 
 processOutput :: TxId -> Int -> Output -> ChainM Value
 processOutput tid i output = do
