@@ -1,0 +1,6 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:p1"
+    - path: "./app/p2p.hs"
+      component: "exe:p2p"
