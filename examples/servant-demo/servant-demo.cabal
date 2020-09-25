@@ -1,0 +1,56 @@
+name:                servant-demo
+version:             0.1.0.0
+author:              Lars Bruenjes
+maintainer:          lars.bruenjes@iohk.io
+copyright:           (c) 2019 Lars Bruenjes
+category:            Training
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  static/index.html
+                   , static/app.js
+                   , static/users.js
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Hello
+                     , Phantom
+                     , PhantomPW
+                     , Proxies
+                     , Users
+                     , UsersDB
+  build-depends:       base == 4.13.0.0
+                     , acid-state
+                     , aeson
+                     , conduit
+                     , monad-logger
+                     , mtl
+                     , persistent
+                     , persistent-sqlite
+                     , persistent-template
+                     , safecopy
+                     , servant-docs
+                     , servant-js
+                     , servant-server
+                     , text
+                     , unliftio-core
+                     , warp
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+
+executable hello
+  hs-source-dirs:      app
+  main-is:             hello.hs
+  build-depends:       base == 4.13.0.0
+                     , servant-demo
+                     , warp
+  ghc-options:         -Wall -O2
+  default-language:    Haskell2010
+
+executable users
+  hs-source-dirs:      app
+  main-is:             users.hs
+  build-depends:       base >= 4.13.0.0
+                     , servant-demo
+                     , warp
+  ghc-options:         -Wall -O2
+  default-language:    Haskell2010

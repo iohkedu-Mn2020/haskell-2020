@@ -106,6 +106,7 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 | 18.09.2020 | Plutus: State Machines                   | [video][79] | [chat][80] |                              |
 | 21.09.2020 | [Template Haskell][81]                   | [video][82] | [chat][83] |                              |
 | 23.09.2020 | Liquid Haskell & Propositions as Types   | [video][84] | [chat][85] |                              |
+| 25.09.2020 | Servant & Persistent                     | [video][86] | [chat][87] |                              |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -192,6 +193,8 @@ Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
 [83]:  https://drive.google.com/file/d/1lvR2rupIgA-KeddDWIIuOyBdJLYO1onk/view?usp=sharing
 [84]:  https://drive.google.com/file/d/11cpYOPx-MuNjFo1Ia_DuH1DiTqMidpsP/view?usp=sharing
 [85]:  https://drive.google.com/file/d/1IHccsUdYivX1GOn_vDz9E4zn_T21596-/view?usp=sharing
+[86]:  https://drive.google.com/file/d/1t5j5Rcdmq300lkQ8T4MH5ZRq8OAhcLnB/view?usp=sharing
+[87]:  https://drive.google.com/file/d/1QXVpG1-UcSDco0jAhrHuYwU9s3kCXV5J/view?usp=sharing
 
 ### Assignments
 
