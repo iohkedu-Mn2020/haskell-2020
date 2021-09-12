@@ -1,8 +1,8 @@
-# Haskell and Cryptocurrencies. Mongolia 2020
+# Haskell and Cryptocurrencies
 
 ![Haskell Logo](https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg)
 
-- Lectures: Mondays, Wednesdays and Fridays
+- Lectures: TODO: Insert lecture days
 - **Instructors:**
   - [Lars Brünjes](https://iohk.io/en/team/lars-brunjes)
   - [Andres Löh](http://www.well-typed.com/people/andres/)
@@ -39,74 +39,55 @@ this up, don't worry for now.
 
 ## How to get help
 
-### Students portal
-
-Is the first source of information. Here you will find
-lecture, notes, exercises, etc.
-Visit it in: [haskell-mongolia-2020](https://github.com/iohkedu/haskell-mongolia-2020)
-
-### Content Questions
-
-Questions like:
-
+- Discord TODO: Insert link to the discord chat for the class
+- Forum TODO: Insert link to the forum for the class
+- [Haskell tag stackoverflow.com](https://stackoverflow.com/questions/tagged/haskell)
 - How do I install Haskell on Windows? [video](https://drive.google.com/file/d/1vxSk3Qeb_SyCNuwvs6jpQRmM2BNrVRro/view?usp=sharing)
-- Which text editor should I use?
-- What is a Cabal Package?
-  It should go in: [Stackoverflow IohkEdu](https://stackoverflow.com/c/iohkedu/questions)
-  On stackoverflow team students are _encouraged_ to answer each others questions.
-
-[Alejandro Garcia](alejandro.garcia@iohk.io) will monitor the forum closely
-so that we don't let questions go unanswered.
 
 ### Defects
 
-If you found a defect in one of the sample programs.
+If you find a defect in one of the sample programs.
 Or maybe a typo in one of the slides we will really appreciate it
 if you could post it as an issue on GitHub Itself.
-Report defecs in: [haskell-mongolia-2020/issues](https://github.com/iohkedu/haskell-mongolia-2020/issues)
-
-### Administrative Questions
-
-Related to the Lab in Mongolia should be directed to:
-Dugerdorj Davaadorj <dugerdorj.davaadorj@iohk.io>
+Report defecs in: [issues](TODO Insert link to issues for this class)
 
 ## Class
 
-| Date       | Title                                    | Video       | Chat       | Assignment                   |
-| ---------- | ---------------------------------------- | ----------- | ---------- | ---------------------------- |
-| 20.07.2020 | [Welcome][1]                             | [video][1]  | [chat][2]  |                              |
-|            | [Introduction to Cryptocurrencies][4]    |             |            |                              |
-|            | [An Overview of Haskell][5]              |             |            | [Introduction][6]            |
-| 22.07.2020 | [Datatypes & Functions][7]               | [video][8]  | [chat][9]  | [Datatypes & Functions][10]  |
-| 24.07.2020 | [Polymorphism & Type Classes][11]        | [video][12] | [chat][13] |                              |
-| 27.07.2020 | [Higher-Order Functions][14]             | [video][15] | [chat][16] | [Higher-Order Functions][17] |
-|            | [Packaging & Tools][18]                  |             |            |                              |
-| 29.07.2020 | [IO][19]                                 | [video][20] | [chat][21] | [IO][22]                     |
-| 31.07.2020 | [Testing][23]                            | [video][24] | [chat][25] |                              |
-| 03.08.2020 | [Abstraction Patterns][26]               | [video][27] | [chat][28] |                              |
-| 05.08.2020 | [Concurrency][29]                        | [video][30] | [chat][31] |                              |
-| 07.08.2020 | [Network Servers][32]                    | [video][33] | [chat][34] |                              |
-| 10.08.2020 | [Parser Combinators][35]                 | [video][36] | [chat][37] |                              |
-| 12.08.2020 | [More on Parsing][38]                    | [video][39] | [chat][40] |                              |
-| 14.08.2020 | [Data Structures][41]                    | [video][42] | [chat][43] |                              |
-| 17.08.2020 | [More on Data Structures][44]            | [video][45] | [chat][46] |                              |
-| 19.08.2020 | [Optics][47]                             | [video][48] | [chat][49] |                              |
-| 21.08.2020 | [More Optics][50]                        | [video][51] | [chat][52] |                              |
-| 24.08.2020 | [More on Monads][53]                     | [video][54] | [chat][55] |                              |
-| 26.08.2020 | [Free Monads][56]                        | [video][57] | [chat][58] |                              |
-| 28.08.2020 | [Streaming][59]                          | [video][60] | [chat][61] |                              |
-| 31.08.2020 | [Embedded Domain-Specific Languages][62] | [video][63] | [chat][64] |                              |
-| 02.09.2020 | Marlowe I                                | [video][65] | [chat][66] |                              |
-| 04.09.2020 | Marlowe II                               | [video][67] | [chat][68] |                              |
-| 07.09.2020 | Marlowe III                              | [video][69] | [chat][70] |                              |
-| 09.09.2020 | Marlowe: Static Analysis & Simulator     | [video][71] | [chat][72] |                              |
-| 11.09.2020 | Marlowe: Commodities                     | [video][73] | [chat][74] |                              |
-| 14.09.2020 | Plutus I                                 | [video][75] | [chat][76] |                              |
-| 16.09.2020 | Plutus II                                | [video][77] | [chat][78] |                              |
-| 18.09.2020 | Plutus: State Machines                   | [video][79] | [chat][80] |                              |
-| 21.09.2020 | [Template Haskell][81]                   | [video][82] | [chat][83] |                              |
-| 23.09.2020 | Liquid Haskell & Propositions as Types   | [video][84] | [chat][85] |                              |
-| 25.09.2020 | Servant & Persistent                     | [video][86] | [chat][87] |                              |
+| Date        | Title                                    | Video       | Chat       | Assignment                   | Question and Answers     |
+|-------------|------------------------------------------|-------------|------------|------------------------------|--------------------------|
+| Lecture 010 | [Welcome][1]                             | [video][1]  | [chat][2]  |                              |                          |
+|             | [Introduction to Cryptocurrencies][4]    |             |            |                              |                          |
+|             | [An Overview of Haskell][5]              |             |            | [Introduction][6]            |                          |
+| Lecture 020 | [Datatypes & Functions][7]               | [video][8]  | [chat][9]  | [Datatypes & Functions][10]  |                          |
+| Lecture 030 | [Polymorphism & Type Classes][11]        | [video][12] | [chat][13] |                              |                          |
+| Lecture 040 | [Higher-Order Functions][14]             | [video][15] | [chat][16] | [Higher-Order Functions][17] |                          |
+|             | [Packaging & Tools][18]                  |             |            |                              |                          |
+| Lecture 050 | [IO][19]                                 | [video][20] | [chat][21] | [IO][22]                     |                          |
+| Lecture 060 | [Testing][23]                            | [video][24] | [chat][25] |                              |                          |
+| Lecture 070 | [Abstraction Patterns][26]               | [video][27] | [chat][28] |                              |                          |
+| Lecture 080 | [Concurrency][29]                        | [video][30] | [chat][31] |                              |                          |
+| Lecture 090 | [Network Servers][32]                    | [video][33] | [chat][34] |                              |                          |
+| Lecture 100 | [Parser Combinators][35]                 | [video][36] | [chat][37] |                              |                          |
+| Lecture 110 | [More on Parsing][38]                    | [video][39] | [chat][40] |                              |                          |
+| Lecture 120 | [Data Structures][41]                    | [video][42] | [chat][43] |                              |                          |
+| Lecture 130 | [More on Data Structures][44]            | [video][45] | [chat][46] |                              | [video][200]/[chat][201] |
+| Lecture 140 | [Optics][47]                             | [video][48] | [chat][49] |                              | [video][202]/[chat][203] |
+| Lecture 150 | [More Optics][50]                        | [video][51] | [chat][52] |                              |                          |
+| Lecture 160 | [More on Monads][53]                     | [video][54] | [chat][55] |                              | [video][204]/[chat][205] |
+| Lecture 170 | [Free Monads][56]                        | [video][57] | [chat][58] |                              | [video][206]/[chat][207] |
+| Lecture 180 | [Streaming][59]                          | [video][60] | [chat][61] |                              |                          |
+| Lecture 190 | [Embedded Domain-Specific Languages][62] | [video][63] | [chat][64] |                              | [video][208]/[chat][209] |
+| Lecture 200 | Marlowe I                                | [video][65] | [chat][66] |                              | [video][210]/[chat][211] |
+| Lecture 210 | Marlowe II                               | [video][67] | [chat][68] |                              |                          |
+| Lecture 220 | Marlowe III                              | [video][69] | [chat][70] |                              | [video][212]/[chat][213] |
+| Lecture 230 | Marlowe: Static Analysis & Simulator     | [video][71] | [chat][72] |                              | [video][214]/[chat][215] |
+| Lecture 240 | Marlowe: Commodities                     | [video][73] | [chat][74] |                              |                          |
+| Lecture 250 | Plutus I                                 | [video][75] | [chat][76] |                              | [video][216]/[chat][217] |
+| Lecture 260 | Plutus II                                | [video][77] | [chat][78] |                              | [video][218]/[chat][219] |
+| Lecture 270 | Plutus: State Machines                   | [video][79] | [chat][80] |                              |                          |
+| Lecture 280 | [Template Haskell][81]                   | [video][82] | [chat][83] |                              | [video][220]/[chat][221] |
+| Lecture 290 | Liquid Haskell & Propositions as Types   | [video][84] | [chat][85] |                              | [video][222]/[chat][223] |
+| Lecture 300 | Servant & Persistent                     | [video][86] | [chat][87] |                              |                          |
 
 [1]:   ../lectures/00-welcome.pdf
 [2]:   https://drive.google.com/file/d/1u0xNcuoi9cLTFMenfEbNRXqe0S5sI-nj/view?usp=sharing
@@ -203,14 +184,14 @@ All homework submission is via GitHub classroom.
 If you have questions, check this video:
 [How to submit your homework on GitHub classroom](https://youtu.be/MSe8xIEiulc)
 
-- [w01](https://classroom.github.com/g/GZPFmDbA), due 7-August-2020, 12:30 MNG
-- [w02](https://classroom.github.com/g/ZSww0ngM), due 14-August-2020, 12:30 MNG
-- [w03](https://classroom.github.com/g/Wc4HWmsI), due 21-August-2020, 12:30 MNG
-- [w04](https://classroom.github.com/g/3zLh1EOf), due 28-August-2020, 12:30 MNG
-- [w05](https://classroom.github.com/g/sO3WMGuz), due 4-September-2020, 12:30 MNG
-- [w06](https://classroom.github.com/g/JTzSeMXf), due 11-September-2020, 12:30 MNG
-- [w07](https://classroom.github.com/g/gkL7ML4I), due 22-September-2020, 12:30 MNG
-- [p1](https://classroom.github.com/g/pQ5wHPtj), due 21-August-2020, 12:30 MNG
+- [w01](https://classroom.github.com/g/GZPFmDbA)
+- [w02](https://classroom.github.com/g/ZSww0ngM)
+- [w03](https://classroom.github.com/g/Wc4HWmsI)
+- [w04](https://classroom.github.com/g/3zLh1EOf)
+- [w05](https://classroom.github.com/g/sO3WMGuz)
+- [w06](https://classroom.github.com/g/JTzSeMXf)
+- [w07](https://classroom.github.com/g/gkL7ML4I)
+- [p1](https://classroom.github.com/g/pQ5wHPtj)
 
 ### Tests
 
@@ -219,29 +200,13 @@ Don't worry, it's the same technique as the homeworks,
 the only difference is that here the time windows is shorter and
 that you will work alone, not in a team.
 
-| Date       | Time              | Test
-| ---------- | ----------------- | --------------------------------------------- |
-| 29.07.2020 | 12:30 - 14:30 MNG | [t1](https://classroom.github.com/a/C4Juj31P) |
-| 12.08.2020 | 12:30 - 14:30 MNG | [t2](https://classroom.github.com/a/dHzLBhZ_) |
-| 26.08.2020 | 12:30 - 14:30 MNG | [t3](https://classroom.github.com/a/AqhOUQ2e) |
-| 09.09.2020 | 12:30 - 14:30 MNG | [t4](https://classroom.github.com/a/kNUSk7mP) |
+| Date    | Time                                          |
+|---------+-----------------------------------------------|
+| Test 10 | [t1](https://classroom.github.com/a/C4Juj31P) |
+| Test 20 | [t2](https://classroom.github.com/a/dHzLBhZ_) |
+| Test 30 | [t3](https://classroom.github.com/a/AqhOUQ2e) |
+| Test 40 | [t4](https://classroom.github.com/a/kNUSk7mP) |
 
-### Examples and Q&A
-
-| Date       | Video        | Chat        |
-| ---------- | ------------ | ----------- |
-| 18.08.2020 | [video][200] | [chat][201] |
-| 20.08.2020 | [video][202] | [chat][203] |
-| 25.08.2020 | [video][204] | [chat][205] |
-| 27.08.2020 | [video][206] | [chat][207] |
-| 01.09.2020 | [video][208] | [chat][209] |
-| 03.09.2020 | [video][210] | [chat][211] |
-| 08.09.2020 | [video][212] | [chat][213] |
-| 10.09.2020 | [video][214] | [chat][215] |
-| 15.09.2020 | [video][216] | [chat][217] |
-| 17.09.2020 | [video][218] | [chat][219] |
-| 22.09.2020 | [video][220] | [chat][221] |
-| 24.09.2020 | [video][222] | [chat][223] |
 
 [200]: https://drive.google.com/file/d/1_dVRHFZgZhQE27HhDVRLq_QdvJAP1yK0/view?usp=sharing
 [201]: https://drive.google.com/file/d/1Wx-vzhmE4XiaocV2FrV5VtloG8xniDP8/view?usp=sharing
@@ -274,20 +239,20 @@ We have read most of this books and they provide good information for beginners.
 
 1. Lipovača M. [Learn You A Haskell For Great Good!](http://learnyouahaskell.com/). San Francisco: No Starch Press; 2012.
 
->  Beginner Friendly book with lots of examples.
+>Beginner Friendly book with lots of examples.
 
 2. O'Sullivan B, Stewart D, Goerzen J. [Real World Haskell](http://book.realworldhaskell.org/). Farnham: O'Reilly; 2009.
 
->  A lot of real world techniques, just a little bit outdated at this point.
+>A lot of real world techniques, just a little bit outdated at this point.
 
 3. Bird R. [Algorithm Design With Haskell](https://www.amazon.com/Algorithm-Design-Haskell-Richard-Bird-ebook/dp/B08BKXJ1N3/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1597814133&sr=8-1). Cambridge University Press; 2020.
 
->  Learn how far you can get with immutable data, to implement almost all standard algorithms.
+>Learn how far you can get with immutable data, to implement almost all standard algorithms.
 
 4. Thibaut C. [Texas Hold'em: The Little Haskeller](https://leanpub.com/texasholdem-tlh).leanpub.com; 2019.
 
->  A long article, written in the Quesntion and Answer format. Like the Little Schemer.
+>A long article, written in the Quesntion and Answer format. Like the Little Schemer.
 
 5. Penner C. [Optics By Example: Functional Lenses In Haskell](https://leanpub.com/optics-by-example). leanpub.com; 2020.
 
->  The only book on optics.
+>The only book on optics.
