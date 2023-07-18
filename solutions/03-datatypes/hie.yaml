@@ -1,8 +1,0 @@
-cradle:
-  cabal:
-    - path: "./src"
-      component: "lib:datatypes"
-    - path: "./test"
-      component: "test:datatypes-tests"
-    - path: "./doctest"
-      component: "test:datatypes-doctests"

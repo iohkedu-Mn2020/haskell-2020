@@ -1,8 +1,0 @@
-cradle:
-  cabal:
-    - path: "./src"
-      component: "lib:higher-order"
-    - path: "./test"
-      component: "test:higher-order-tests"
-    - path: "./doctest"
-      component: "test:higher-order-doctests"

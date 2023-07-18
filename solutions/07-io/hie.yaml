@@ -1,8 +1,0 @@
-cradle:
-  cabal:
-    - path: "./src"
-      component: "lib:io"
-    - path: "./test"
-      component: "test:io-tests"
-    - path: "./doctest"
-      component: "test:io-doctests"
